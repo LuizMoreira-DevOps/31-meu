@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/LuizMoreira-DevOps/31-meu/compare/v1.0.0...v1.1.0) (2026-09-22)
+
+
+### Features
+
+* initialize Next.js base with static rendering ([#41](https://github.com/LuizMoreira-DevOps/31-meu/issues/41)) ([069e995](https://github.com/LuizMoreira-DevOps/31-meu/commit/069e995ec9b8cbab3dc49ff101d17fc1869e0e5f)), closes [#40](https://github.com/LuizMoreira-DevOps/31-meu/issues/40)
+
+
+### Bug Fixes
+
+* remove forced release version ([#43](https://github.com/LuizMoreira-DevOps/31-meu/issues/43)) ([bab4617](https://github.com/LuizMoreira-DevOps/31-meu/commit/bab461755f6ab43df79d11544f3aea6c876f179c))
+
 ## 1.0.0 (2026-09-02)
 
 
