@@ -1,0 +1,28 @@
+{
+    "title": "Combos para sua festa",
+    "description": "Encontre uma opção para sua comemoração. Consulte os detalhes dos combos no nosso site atual.",
+    "packages": [
+        {
+            "id": "escolar",
+            "title": "Combo Escolar",
+            "label": "Ver combo Escolar",
+            "href": "https://31meu.com.br/pacote-escolar.html"
+        },
+        {
+            "id": "pocket",
+            "title": "Combo Pocket",
+            "label": "Ver combo Pocket",
+            "href": "https://31meu.com.br/pacote-pocket.html"
+        },
+        {
+            "id": "premium",
+            "title": "Combo Premium",
+            "label": "Ver combo Premium",
+            "href": "https://31meu.com.br/pacote-premium.html"
+        }
+    ],
+    "allPackagesAction": {
+        "label": "Consultar todos os combos",
+        "href": "https://31meu.com.br/pacotes.html"
+    }
+}
