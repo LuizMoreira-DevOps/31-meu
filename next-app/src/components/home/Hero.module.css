@@ -4,7 +4,7 @@
 
 .hero {
     padding: var(--space-12) var(--space-6);
-    background-color: var(--color-surface-soft);
+    background-color: var(--color-surface-warm);
     color: var(--color-heading);
 }
 
@@ -32,6 +32,9 @@
     display: block;
     width: 100%;
     height: auto;
+    border: 3px solid var(--color-brand-turquoise);
+    border-radius: 28px 12px 32px 14px;
+    box-shadow: 6px 6px 0 var(--color-brand-turquoise);
 }
 
 .content {
@@ -39,7 +42,7 @@
 }
 
 /*============================================
-    Visit Button
+    Packages/Visit Button
     =============================================*/
 
 .actions {
@@ -54,38 +57,48 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: var(--space-4);
     min-height: 48px;
     padding: var(--space-4) var(--space-6);
     border: 2px solid var(--color-heading);
-    border-radius: 8px;
-    background-color: var(--color-heading);
-    color: var(--color-background);
+    border-radius: 999px;
+    box-shadow: 0 4px 0 var(--color-heading);
+    color: var(--color-heading);
     font: inherit;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
     text-decoration: none;
 }
 
-.visitButton:hover {
-    background-color: var(--color-background);
-    color: var(--color-heading);
+.visitButton {
+    background-color: var(--color-action-coral);
 }
 
 .packagesButton {
-    background-color: transparent;
-    color: var(--color-heading);
+    background-color: var(--color-action-yellow);
 }
 
+.visitButton:hover,
 .packagesButton:hover {
-    background-color: var(--color-heading);
-    color: var(--color-background);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.visitButton:active,
+.packagesButton:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 var(--color-heading);
 }
 
 .visitButton:focus-visible,
 .packagesButton:focus-visible {
     outline: 3px solid var(--color-heading);
-    outline-offset: 4px;
+    outline-offset: 6px;
 }
+
+/*============================================
+    Responsive
+    =============================================*/
 
 @media (min-width: 900px) {
     .container {
