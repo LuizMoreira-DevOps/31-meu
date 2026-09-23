@@ -1,0 +1,14 @@
+.home {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    min-width: 0;
+}
+
+@media (min-width: 900px) {
+    .main {
+        order: -1;
+    }
+}

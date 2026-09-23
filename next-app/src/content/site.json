@@ -4,5 +4,27 @@
     },
     "messages": {
         "scheduleVisit": "Olá! Visitei o site e gostaria de agendar uma visita ao 31 Meu."
+    },
+    "navigation": {
+        "openLabel": "Abrir menu",
+        "closeLabel": "Fechar menu",
+        "label": "Navegação principal",
+        "items": [
+            {
+                "id": "home",
+                "label": "Início",
+                "href": "/"
+            },
+            {
+                "id": "packages",
+                "label": "Combos",
+                "href": "/pacotes"
+            }
+        ]
+    },
+    "brand": {
+        "name": "31 Meu",
+        "href": "/",
+        "homeLabel": "31 Meu — página inicial"
     }
 }

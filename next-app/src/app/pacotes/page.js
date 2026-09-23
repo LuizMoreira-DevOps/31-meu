@@ -1,12 +1,20 @@
-import { getPackagesContent } from "@/lib/content";
+import Header from "@/components/layout/Header";
 import PackagesOverview from "@/components/packages/Packages";
+import { getSiteContent, getPackagesContent } from "@/lib/content";
 
 export default async function PackagesPage() {
-    const content = await getPackagesContent();
+    const [site, content] = await Promise.all([
+        getSiteContent(),
+        getPackagesContent(),
+    ]);
 
     return (
-        <main id="conteudo" tabIndex={-1}>
-            <PackagesOverview content={content} />
-        </main>
+        <>
+            <Header brand={site.brand} navigation={site.navigation} />
+
+            <main id="conteudo" tabIndex={-1}>
+                <PackagesOverview content={content} />
+            </main>
+        </>
     );
 }

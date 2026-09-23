@@ -1,0 +1,30 @@
+.header {
+    padding: var(--space-4) var(--space-6);
+    background-color: var(--color-brand-turquoise);
+    color: var(--color-background);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4) var(--space-6);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: inherit;
+    font-size: var(--font-size-lead);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.brand:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 4px;
+}

@@ -32,6 +32,11 @@
     LAYOUT
     ===========================================*/
     --container-width: 1620px;
+
+    /* HERO */
+    --hero-padding-block-desktop: clamp(var(--space-6), 4vh, var(--space-12));
+    --hero-photo-max-height-desktop: 48vh;
+    --container-width-desktop: min(var(--container-width), 160vh);
 }
 
 *,

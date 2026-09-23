@@ -1,4 +1,8 @@
 import Hero from "@/components/home/Hero";
+import Header from "@/components/layout/Header";
+
+import styles from "./page.module.css";
+
 import { getSiteContent, getHomeContent } from "@/lib/content";
 import { createWhatsAppUrl } from "@/lib/whatsapp";
 
@@ -14,8 +18,12 @@ export default async function HomePage() {
     );
 
     return (
-        <main id="conteudo" tabIndex={-1}>
-            <Hero hero={home.hero} visitUrl={visitUrl} />
-        </main>
+        <div className={styles.home}>
+            <Header brand={site.brand} navigation={site.navigation} />
+
+            <main id="conteudo" tabIndex={-1} className={styles.main}>
+                <Hero hero={home.hero} visitUrl={visitUrl} />
+            </main>
+        </div>
     );
 }
