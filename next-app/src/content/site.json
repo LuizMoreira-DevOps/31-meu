@@ -25,6 +25,11 @@
     "brand": {
         "name": "31 Meu",
         "href": "/",
-        "homeLabel": "31 Meu — página inicial"
+        "homeLabel": "31 Meu — página inicial",
+        "logo": {
+            "src": "/assets/logo/Logo-31-Meu-Aquarela.svg",
+            "width": 600,
+            "height": 600
+        }
     }
 }

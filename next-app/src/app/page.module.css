@@ -1,14 +1,15 @@
 .home {
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
-.main {
+.hero {
     min-width: 0;
 }
 
 @media (min-width: 900px) {
-    .main {
+    .hero {
         order: -1;
     }
 }

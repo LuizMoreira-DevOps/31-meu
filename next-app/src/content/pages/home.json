@@ -13,5 +13,22 @@
             "label": "Conheça os combos",
             "href": "/pacotes"
         }
+    },
+    "combos": {
+        "title": "Cada festa, uma nova aventura.",
+        "items": [
+            {
+                "id": "escolar",
+                "theme": "yellow"
+            },
+            {
+                "id": "pocket",
+                "theme": "coral"
+            },
+            {
+                "id": "premium",
+                "theme": "turquoise"
+            }
+        ]
     }
 }

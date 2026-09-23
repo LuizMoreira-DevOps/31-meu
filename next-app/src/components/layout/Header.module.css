@@ -22,9 +22,46 @@
     font-size: var(--font-size-lead);
     font-weight: 800;
     text-decoration: none;
+    padding: var(--brand-surface-padding);
+    background-color: var(--color-surface-warm);
+    border-radius: 12px;
+    box-shadow: 0 4px 0 var(--color-heading);
 }
 
 .brand:focus-visible {
     outline: 3px solid currentColor;
     outline-offset: 4px;
+}
+
+.logo {
+    display: block;
+    width: var(--brand-logo-width);
+    height: auto;
+}
+
+@media (min-width: 900px) {
+    @media (min-width: 900px) {
+        .container {
+            max-width: var(--container-width-desktop);
+        }
+
+        .logo {
+            width: var(--brand-logo-width-desktop);
+        }
+
+        .floatingBrand .container {
+            position: relative;
+            min-height: 44px;
+            padding-inline-start: var(--header-brand-clearance);
+            justify-content: flex-end;
+        }
+
+        .floatingBrand .brand {
+            position: absolute;
+            inset-inline-start: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+    }
 }

@@ -10,6 +10,12 @@
     --line-height-body: 1.5;
 
     /*===========================================
+    Typography for sections and cards
+    ===========================================*/
+    --font-size-section: clamp(1.75rem, 2.5vw, 3rem);
+    --font-size-card-title: clamp(1.375rem, 1.8vw, 2rem);
+
+    /*===========================================
     COLORS
     ===========================================*/
     --color-background: #ffffff;
@@ -33,10 +39,32 @@
     ===========================================*/
     --container-width: 1620px;
 
-    /* HERO */
+    /*===========================================
+    HERO
+    ===========================================*/
     --hero-padding-block-desktop: clamp(var(--space-6), 4vh, var(--space-12));
     --hero-photo-max-height-desktop: 48vh;
     --container-width-desktop: min(var(--container-width), 160vh);
+
+    /*===========================================
+    COMBO CARD
+    ===========================================*/
+    --combo-card-min-height: 12rem;
+
+    /*===========================================
+    BRAND LOGO
+    ===========================================*/
+    --brand-logo-width: 4rem;
+    --brand-logo-width-desktop: 6rem;
+    --brand-surface-padding: 0.5rem;
+
+    /*===========================================
+    HEADER
+    ===========================================*/
+    --header-brand-clearance: calc(
+        var(--brand-logo-width-desktop) + var(--brand-surface-padding) * 2 +
+            var(--space-6)
+    );
 }
 
 *,
