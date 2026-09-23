@@ -1,0 +1,17 @@
+{
+    "hero": {
+        "title": "Diversão para os pequenos",
+        "subtitle": "Memórias para toda a família.",
+        "image": {
+            "src": "/assets/images/festa-super-herois-lego.webp",
+            "alt": "Decoração de festa com super-heróis em estilo LEGO e arco de balões coloridos",
+            "width": 1800,
+            "height": 1202
+        },
+        "visitLabel": "Agende uma visita",
+        "packagesAction": {
+            "label": "Conheça os pacotes",
+            "href": "/pacotes"
+        }
+    }
+}
