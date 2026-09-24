@@ -1,6 +1,9 @@
 {
     "hero": {
-        "title": "Diversão para os pequenos",
+        "title": {
+            "highlight": "Diversão",
+            "rest": "para os pequenos"
+        },
         "subtitle": "Memórias para toda a família.",
         "image": {
             "src": "/assets/images/festa-super-herois-lego.webp",

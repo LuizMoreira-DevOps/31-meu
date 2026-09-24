@@ -1,4 +1,5 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Luckiest_Guy, Kalam } from "next/font/google";
+
 import "@/css/global.css";
 
 const geistSans = Geist({
@@ -11,6 +12,20 @@ const geistMono = Geist_Mono({
     subsets: ["latin"],
 });
 
+const luckiestGuy = Luckiest_Guy({
+    variable: "--font-luckiest-guy",
+    subsets: ["latin"],
+    weight: "400",
+    display: "swap",
+});
+
+const kalam = Kalam({
+    variable: "--font-kalam",
+    subsets: ["latin"],
+    weight: "700",
+    display: "swap",
+});
+
 export const metadata = {
     title: "31 Meu Buffet Infantil",
     description:
@@ -21,7 +36,7 @@ export default function RootLayout({ children }) {
     return (
         <html
             lang="pt-BR"
-            className={`${geistSans.variable} ${geistMono.variable}`}
+            className={`${geistSans.variable} ${geistMono.variable} ${luckiestGuy.variable} ${kalam.variable}`}
         >
             <body>{children}</body>
         </html>
