@@ -1,4 +1,18 @@
 {
+    "socialLinks": [
+        {
+            "id": "instagram",
+            "label": "Instagram",
+            "handle": "@31meubuffet",
+            "href": "https://www.instagram.com/31meubuffet/"
+        },
+        {
+            "id": "facebook",
+            "label": "Facebook",
+            "handle": "31 MEU - Buffet Infantil",
+            "href": "https://www.facebook.com/Buffet31meu/"
+        }
+    ],
     "location": {
         "address": {
             "street": "Rua Benjamin Zampieri Parizi",
@@ -64,6 +78,11 @@
                 "id": "location",
                 "label": "Localização",
                 "href": "/localizacao"
+            },
+            {
+                "id": "contact",
+                "label": "Contato",
+                "href": "/contato"
             }
         ]
     },

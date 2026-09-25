@@ -1,0 +1,179 @@
+.form {
+    display: grid;
+    gap: 1.5rem;
+
+    width: 100%;
+    max-width: 640px;
+    margin-inline: auto;
+    padding: clamp(1.25rem, 4vw, 2.5rem);
+
+    border: 1px solid #e6dcef;
+    border-radius: 2rem;
+    background-color: #ffffff;
+    color: #252044;
+    box-shadow: 0 10px 32px rgb(37 32 68 / 6%);
+}
+
+.header {
+    text-align: center;
+}
+
+.header h2 {
+    margin: 0 0 0.75rem;
+    font-family: var(--font-fredoka), var(--font-sans), sans-serif;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 500;
+    line-height: 1.15;
+    text-wrap: balance;
+}
+
+.header p {
+    margin: 0 0 0.75rem;
+    line-height: 1.65;
+}
+
+.header p:last-child {
+    margin-bottom: 0;
+}
+
+.field {
+    display: grid;
+    gap: 0.5rem;
+    min-width: 0;
+    text-align: left;
+}
+
+.field label {
+    font-size: 0.9375rem;
+    font-weight: 650;
+    line-height: 1.5;
+}
+
+.field input,
+.field select,
+.field textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    padding: 0.875rem 1rem;
+
+    border: 1px solid #c9bbd9;
+    border-radius: 0.875rem;
+    background-color: #fffcf7;
+    color: #252044;
+
+    font: inherit;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.field textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+    color: #746a80;
+    opacity: 1;
+}
+
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible {
+    outline: 3px solid #6a27ab;
+    outline-offset: 3px;
+    border-color: #6a27ab;
+}
+
+.field [aria-invalid="true"] {
+    border-color: #b42338;
+}
+
+.error {
+    margin: 0;
+    color: #b42338;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.optional {
+    min-width: 0;
+    margin: 0;
+    padding: 1.25rem;
+
+    border: 1px solid #ded1ec;
+    border-radius: 1.25rem;
+    background-color: #faf6ff;
+    text-align: left;
+}
+
+.optional legend {
+    max-width: 100%;
+    padding-inline: 0.5rem;
+    color: #6a27ab;
+    font-weight: 650;
+    line-height: 1.5;
+}
+
+.optional > p {
+    margin: 0 0 1.25rem;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+.optionalGrid {
+    display: grid;
+    gap: 1rem;
+}
+
+.submitArea {
+    display: grid;
+    gap: 0.875rem;
+    text-align: center;
+}
+
+.submitButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 52px;
+    padding: 0.875rem 1.25rem;
+
+    border: 0;
+    border-radius: 999px;
+    background-color: #d90963;
+    color: #ffffff;
+
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 650;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background-color: #b80753;
+}
+
+.submitButton:focus-visible {
+    outline: 3px solid #6a27ab;
+    outline-offset: 4px;
+}
+
+.note {
+    margin: 0;
+    color: #62566f;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+@media (min-width: 600px) {
+    .optionalGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
