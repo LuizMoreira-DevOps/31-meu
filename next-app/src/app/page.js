@@ -2,6 +2,7 @@ import Header from "@/components/layout/Header";
 import Hero from "@/components/home/Hero";
 import HomeSections from "@/components/home/HomeSections";
 import BackToTop from "@/components/layout/BackToTop";
+import Footer from "@/components/layout/Footer";
 
 import { getSiteContent, getHomeContent } from "@/lib/content";
 import { createWhatsAppUrl } from "@/lib/whatsapp";
@@ -33,21 +34,11 @@ export default async function HomePage() {
                 <Hero hero={home.hero} />
                 <HomeSections content={home} visitUrl={visitUrl} />
             </main>
-            <footer className={styles.footer}>
-                <div className={styles.footerInner}>
-                    <a className={styles.footerBrand} href={site.brand.href}>
-                        {site.brand.name}
-                    </a>
-                    <nav aria-label="Navegação do rodapé">
-                        {site.navigation.items.map((item) => (
-                            <a key={item.id} href={item.href}>
-                                {item.label}
-                            </a>
-                        ))}
-                    </nav>
-                    <p>{home.footerText}</p>
-                </div>
-            </footer>
+            <Footer
+                brand={site.brand}
+                navigation={site.navigation}
+                content={site.footer}
+            />
             <div className={styles.floatingActions}>
                 <a
                     className={styles.whatsappWidget}

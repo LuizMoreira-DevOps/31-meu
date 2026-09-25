@@ -1,0 +1,47 @@
+{
+    "eyebrow": "Antes da festa",
+    "title": "Dúvidas comuns",
+    "description": "Reunimos aqui as perguntas mais frequentes para facilitar seu atendimento.",
+    "items": [
+        {
+            "id": "capacidade",
+            "question": "Qual é a capacidade do espaço?",
+            "answer": "Nosso espaço acomoda até 80 pessoas entre adultos e crianças. Informe o número de convidados no momento do orçamento."
+        },
+        {
+            "id": "itens-inclusos",
+            "question": "O que está incluído nos combos?",
+            "answer": "Os combos variam conforme a proposta da festa e podem incluir estrutura do espaço, gastronomia, decoração e serviços de apoio. Consulte os detalhes na página de combos ou fale com a nossa equipe."
+        },
+        {
+            "id": "orcamento",
+            "question": "Como funciona o orçamento?",
+            "answer": "Após o contato, enviamos um orçamento personalizado com base na data desejada, idade da criança, número de convidados e combo escolhido."
+        },
+        {
+            "id": "decoracao",
+            "question": "Vocês oferecem decoração personalizada?",
+            "answer": "Sim. Trabalhamos com temas variados e opções personalizadas, conforme o combo e a proposta da comemoração."
+        },
+        {
+            "id": "antecedencia",
+            "question": "Qual é a antecedência mínima para agendar?",
+            "answer": "Recomendamos entrar em contato com pelo menos 15 dias de antecedência, mas a disponibilidade pode variar de acordo com a data."
+        },
+        {
+            "id": "alimentos-externos",
+            "question": "Posso levar bolo ou alimentos de fora?",
+            "answer": "Consulte nossa política no momento do atendimento. Alguns itens podem depender das condições do combo contratado."
+        }
+    ],
+    "support": {
+        "title": "Ficou com alguma dúvida?",
+        "description": "Consulte os combos disponíveis e fale com a nossa equipe para obter mais informações.",
+        "packagesAction": {
+            "label": "Ver combos",
+            "href": "/pacotes"
+        },
+        "contactLabel": "Tirar uma dúvida pelo WhatsApp",
+        "contactMessage": "Olá! Consultei as dúvidas comuns no site e gostaria de mais informações sobre uma festa no 31 Meu."
+    }
+}

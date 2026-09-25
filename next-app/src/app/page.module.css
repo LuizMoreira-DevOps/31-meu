@@ -13,17 +13,21 @@
         transparent 28rem
     );
 }
+
 .home main {
     min-width: 0;
 }
+
 .home section[id] {
     scroll-margin-top: 1.5rem;
 }
+
 .home a:focus-visible,
 .home button:focus-visible {
     outline: 3px solid #34256c;
     outline-offset: 5px;
 }
+
 .skipLink {
     position: absolute;
     left: 1rem;
@@ -32,46 +36,9 @@
     padding: 1rem;
     background: white;
 }
+
 .skipLink:focus {
     top: 1rem;
-}
-.footer {
-    background: #252044;
-    color: #fff8ed;
-    padding: 2.5rem var(--sketch-gutter);
-}
-.footerInner {
-    max-width: var(--sketch-width);
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-}
-.footerBrand {
-    font-family: var(--sketch-display);
-    font-size: 2rem;
-    font-weight: 600;
-    color: #ffa9d3;
-}
-.footer nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.25rem;
-}
-.footer nav a {
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-}
-.footer p {
-    flex-basis: 100%;
-    margin: 0;
-    font-size: 0.875rem;
-}
-.footer a:focus-visible {
-    outline-color: #ffe5a6;
 }
 
 .floatingActions {

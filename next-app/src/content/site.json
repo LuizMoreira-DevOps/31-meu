@@ -1,4 +1,8 @@
 {
+    "footer": {
+        "text": "31 Meu · Festas, encontros e boas memórias.",
+        "navigationLabel": "Navegação do rodapé"
+    },
     "contact": {
         "whatsapp": "5541997249945"
     },
@@ -34,6 +38,11 @@
                 "id": "testimonials",
                 "label": "Depoimentos",
                 "href": "/#depoimentos"
+            },
+            {
+                "id": "faq",
+                "label": "Dúvidas",
+                "href": "/faq"
             }
         ]
     },
