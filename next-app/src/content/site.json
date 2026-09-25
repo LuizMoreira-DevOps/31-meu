@@ -1,4 +1,20 @@
 {
+    "location": {
+        "address": {
+            "street": "Rua Benjamin Zampieri Parizi",
+            "number": "76",
+            "neighborhood": "Santa Felicidade",
+            "city": "Curitiba",
+            "state": "PR",
+            "postalCode": "82400-090",
+            "country": "Brasil"
+        },
+        "openingHours": "Todos os dias, das 9h às 22h",
+        "coordinates": {
+            "latitude": -25.3974587,
+            "longitude": -49.3412299
+        }
+    },
     "footer": {
         "text": "31 Meu · Festas, encontros e boas memórias.",
         "navigationLabel": "Navegação do rodapé"
@@ -43,6 +59,11 @@
                 "id": "faq",
                 "label": "Dúvidas",
                 "href": "/faq"
+            },
+            {
+                "id": "location",
+                "label": "Localização",
+                "href": "/localizacao"
             }
         ]
     },

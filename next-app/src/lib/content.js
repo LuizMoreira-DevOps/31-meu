@@ -2,6 +2,7 @@ import siteContent from "@/content/site.json";
 import homeContent from "@/content/pages/home.json";
 import packagesContent from "@/content/pages/pacotes.json";
 import faqContent from "@/content/pages/faq.json";
+import locationContent from "@/content/pages/localizacao.json";
 
 export async function getSiteContent() {
     return siteContent;
@@ -17,4 +18,8 @@ export async function getPackagesContent() {
 
 export async function getFaqContent() {
     return faqContent;
+}
+
+export async function getLocationContent() {
+    return locationContent;
 }
