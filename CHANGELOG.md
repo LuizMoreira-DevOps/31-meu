@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/LuizMoreira-DevOps/31-meu/compare/v1.1.0...v1.2.0) (2026-09-25)
+
+
+### Features
+
+* implementa nova Home, páginas institucionais e layout compartilhado ([#47](https://github.com/LuizMoreira-DevOps/31-meu/issues/47)) ([f3fa328](https://github.com/LuizMoreira-DevOps/31-meu/commit/f3fa3289bc3b66dea2fa17499ea3b54e647c9d6c)), closes [#44](https://github.com/LuizMoreira-DevOps/31-meu/issues/44)
+
 ## [1.1.0](https://github.com/LuizMoreira-DevOps/31-meu/compare/v1.0.0...v1.1.0) (2026-09-22)
 
 
