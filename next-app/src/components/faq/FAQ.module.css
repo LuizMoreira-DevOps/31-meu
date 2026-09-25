@@ -4,7 +4,7 @@
     --faq-pink: #d90963;
     --faq-cream: #fff8ed;
 
-    padding: clamp(3rem, 7vw, 6rem) clamp(1.25rem, 4vw, 4rem);
+    padding: 1rem var(--page-gutter);
     color: var(--faq-ink);
     background:
         radial-gradient(ellipse at top left, #eee1ff 0, transparent 38rem),
@@ -14,7 +14,7 @@
 .container {
     display: grid;
     gap: 2.5rem;
-    max-width: 1200px;
+    max-width: var(--container-width);
     margin-inline: auto;
 }
 
@@ -34,7 +34,7 @@
 
 .title {
     margin: 0 0 1rem;
-    font-family: var(--font-fredoka), var(--font-sans), sans-serif;
+    font-family: var(--font-display), var(--font-sans), sans-serif;
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 600;
     line-height: 1.08;
@@ -154,7 +154,7 @@
 
 .support h2 {
     margin: 0 0 0.75rem;
-    font-family: var(--font-fredoka), var(--font-sans), sans-serif;
+    font-family: var(--font-display), var(--font-sans), sans-serif;
     font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 500;
     line-height: 1.2;

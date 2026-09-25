@@ -1,10 +1,10 @@
 .home {
-    --sketch-ink: #252044;
-    --sketch-pink: #d90963;
-    --sketch-cream: #fff8ed;
-    --sketch-width: 1200px;
-    --sketch-gutter: clamp(1.25rem, 4vw, 4rem);
-    --sketch-display: var(--font-fredoka), var(--font-sans), sans-serif;
+    --sketch-ink: var(--color-ink);
+    --sketch-pink: var(--color-action-primary);
+    --sketch-cream: var(--color-surface-warm);
+    --sketch-width: var(--container-width);
+    --sketch-gutter: var(--page-gutter);
+    --sketch-display: var(--font-display), var(--font-sans), sans-serif;
     color: var(--sketch-ink);
     background: var(--sketch-cream);
     background-image: radial-gradient(
@@ -26,19 +26,6 @@
 .home button:focus-visible {
     outline: 3px solid #34256c;
     outline-offset: 5px;
-}
-
-.skipLink {
-    position: absolute;
-    left: 1rem;
-    top: -10rem;
-    z-index: 20;
-    padding: 1rem;
-    background: white;
-}
-
-.skipLink:focus {
-    top: 1rem;
 }
 
 .floatingActions {

@@ -54,6 +54,8 @@
 
 @media (min-width: 900px) {
     .nav {
+        flex: 1;
+        min-width: 0;
         width: auto;
     }
 
@@ -67,7 +69,22 @@
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-        gap: var(--space-4) var(--space-6);
+        justify-content: center;
+        gap: 0.25rem 0.75rem;
         margin: 0;
+    }
+
+    .link {
+        min-height: 44px;
+        padding-inline: 0.25rem;
+        border-radius: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        line-height: 1.4;
+        white-space: nowrap;
+    }
+
+    .link:hover {
+        color: var(--color-action-primary-hover);
     }
 }

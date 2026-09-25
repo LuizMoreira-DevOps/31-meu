@@ -1,118 +1,76 @@
 .header {
-    padding: var(--space-4) var(--page-gutter);
-    background-color: var(--color-brand-turquoise);
-    color: var(--color-background);
+    padding: 1rem var(--page-gutter);
+    color: var(--color-ink);
+    background: var(--color-surface-warm);
+    border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .container {
-    max-width: var(--container-width);
-    margin-inline: auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: var(--space-4) var(--space-6);
+    gap: 1rem 1.5rem;
+    width: 100%;
+    max-width: var(--container-width);
+    margin-inline: auto;
 }
 
 .brand {
     display: inline-flex;
+    flex-shrink: 0;
     align-items: center;
+    justify-content: center;
+    min-width: 44px;
     min-height: 44px;
-    color: inherit;
-    font-size: var(--font-size-lead);
-    font-weight: 800;
-    text-decoration: none;
-    padding: var(--brand-surface-padding);
-    background-color: var(--color-surface-warm);
-    border-radius: 12px;
-    box-shadow: 0 4px 0 var(--color-heading);
-}
-
-.brand:focus-visible {
-    outline: 3px solid currentColor;
-    outline-offset: 4px;
+    border-radius: 1rem;
 }
 
 .logo {
     display: block;
-    width: var(--brand-logo-width);
+    width: 80px;
     height: auto;
 }
 
-.floatingBrand {
-    position: relative;
-    isolation: isolate;
-    background-color: transparent;
+.contact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.75rem 1.25rem;
+    border-radius: 999px;
+    background: var(--color-action-primary);
+    color: var(--color-on-action);
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
 }
 
-.floatingBrand::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    background-color: var(--color-brand-turquoise);
-    background-image: var(--texture-paper);
-    background-repeat: repeat;
-    background-size: 180px 180px;
+.contact:hover {
+    background: var(--color-action-primary-hover);
+}
 
-    clip-path: polygon(
-        0% 3%,
-        8% 1%,
-        17% 4%,
-        26% 0%,
-        36% 3%,
-        47% 1%,
-        58% 4%,
-        69% 0%,
-        79% 3%,
-        90% 1%,
-        100% 3%,
-        100% 97%,
-        91% 100%,
-        81% 97%,
-        70% 99%,
-        59% 96%,
-        48% 100%,
-        37% 97%,
-        26% 99%,
-        15% 96%,
-        6% 99%,
-        0% 97%
-    );
+.brand:focus-visible,
+.contact:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 5px;
 }
 
 @media (min-width: 900px) {
     .container {
-        max-width: var(--container-width-desktop);
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 1.5rem;
     }
 
     .logo {
-        width: var(--brand-logo-width-desktop);
+        width: 96px;
     }
 
-    .floatingBrand .container {
-        position: relative;
-        min-height: 44px;
-        padding-inline-start: var(--header-brand-clearance);
-        justify-content: center;
-    }
-
-    .floatingBrand .brand {
-        position: absolute;
-        inset-inline-start: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 1;
-    }
-}
-
-@media (min-width: 1200px) {
-    .floatingBrand {
-        padding-block: 0.75rem;
-    }
-
-    .floatingBrand .container {
-        justify-content: center;
+    .contact {
+        flex-shrink: 0;
+        white-space: nowrap;
     }
 }

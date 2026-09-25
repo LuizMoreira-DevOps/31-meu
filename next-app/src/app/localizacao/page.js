@@ -1,5 +1,3 @@
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Location from "@/components/location/Location";
 import { getSiteContent, getLocationContent } from "@/lib/content";
 import { createWhatsAppUrl } from "@/lib/whatsapp";
@@ -47,8 +45,6 @@ export default async function LocationPage() {
 
     return (
         <>
-            <Header brand={site.brand} navigation={site.navigation} />
-
             <main id="conteudo" tabIndex={-1}>
                 <Location
                     content={content}
@@ -58,12 +54,6 @@ export default async function LocationPage() {
                     visitUrl={visitUrl}
                 />
             </main>
-
-            <Footer
-                brand={site.brand}
-                navigation={site.navigation}
-                content={site.footer}
-            />
         </>
     );
 }

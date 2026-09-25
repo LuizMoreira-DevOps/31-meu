@@ -1,5 +1,3 @@
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Contact from "@/components/contact/Contact";
 import { getSiteContent, getContactContent } from "@/lib/content";
 
@@ -23,8 +21,6 @@ export default async function ContactPage() {
 
     return (
         <>
-            <Header brand={site.brand} navigation={site.navigation} />
-
             <main id="conteudo" tabIndex={-1}>
                 <Contact
                     content={content}
@@ -32,12 +28,6 @@ export default async function ContactPage() {
                     phone={site.contact.whatsapp}
                 />
             </main>
-
-            <Footer
-                brand={site.brand}
-                navigation={site.navigation}
-                content={site.footer}
-            />
         </>
     );
 }

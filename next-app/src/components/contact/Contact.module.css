@@ -1,5 +1,5 @@
 .contact {
-    padding: clamp(3rem, 7vw, 6rem) clamp(1.25rem, 4vw, 4rem);
+    padding: 1rem var(--page-gutter);
     color: #252044;
     background:
         radial-gradient(ellipse at top center, #eee1ff 0, transparent 38rem),
@@ -19,7 +19,7 @@
 
 .title {
     margin: 0 0 1rem;
-    font-family: var(--font-fredoka), var(--font-sans), sans-serif;
+    font-family: var(--font-display), var(--font-sans), sans-serif;
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 600;
     line-height: 1.08;
@@ -83,7 +83,7 @@
 }
 
 .socialName {
-    font-family: var(--font-fredoka), var(--font-sans), sans-serif;
+    font-family: var(--font-display), var(--font-sans), sans-serif;
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.3;

@@ -4,7 +4,7 @@
     ===========================================*/
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
-    --font-display: var(--font-luckiest-guy);
+    --font-display: var(--font-fredoka);
     --font-handwritten: var(--font-kalam);
     --font-size-display: clamp(2rem, 4vw, 4.5rem);
     --font-size-lead: clamp(1.125rem, 2vw, 1.75rem);
@@ -20,14 +20,22 @@
     /*===========================================
     COLORS
     ===========================================*/
-    --color-background: #ffffff;
+    --color-background: #fff;
     --color-text: #1f2937;
     --color-surface-soft: #e0f7f7;
-    --color-heading: #000000;
+    --color-heading: #000;
     --color-surface-warm: #fff8ed;
     --color-brand-turquoise: #007f83;
     --color-action-yellow: #ffe24a;
     --color-action-coral: #ff817a;
+    --color-ink: #252044;
+    --color-action-primary: #d90963;
+    --color-action-primary-hover: #b80753;
+    --color-on-action: #fff;
+    --color-focus: #34256c;
+    --color-focus-on-dark: #ffe5a6;
+    --color-brand-on-dark: #ffa9d3;
+    --color-border-subtle: rgb(37 32 68 / 8%);
 
     /*===========================================
     SPACING
@@ -39,8 +47,8 @@
     /*===========================================
     LAYOUT
     ===========================================*/
-    --container-width: 1620px;
-    --page-gutter: clamp(1.5rem, 4vw, 4rem);
+    --container-width: 1200px;
+    --page-gutter: clamp(1.25rem, 4vw, 4rem);
 
     /*===========================================
     HERO
@@ -114,4 +122,23 @@ select {
 a {
     color: inherit;
     text-decoration: none;
+}
+
+.siteSkipLink {
+    position: fixed;
+    top: -10rem;
+    left: 1rem;
+    z-index: 100;
+    max-width: calc(100% - 2rem);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: var(--color-surface-warm);
+    color: var(--color-ink);
+    font-weight: 600;
+}
+
+.siteSkipLink:focus {
+    top: 1rem;
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;
 }

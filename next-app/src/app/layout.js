@@ -6,6 +6,11 @@ import {
     Fredoka,
 } from "next/font/google";
 
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import { getSiteContent } from "@/lib/content";
+import { createWhatsAppUrl } from "@/lib/whatsapp";
+
 import "@/css/global.css";
 
 const geistSans = Geist({
@@ -45,13 +50,41 @@ export const metadata = {
         "Buffet Infantil em Curitiba para festas, aniversários e momentos especiais.",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+    const site = await getSiteContent();
+
+    const contactUrl = createWhatsAppUrl(
+        site.contact.whatsapp,
+        site.messages.scheduleVisit,
+    );
+
     return (
         <html
             lang="pt-BR"
             className={`${geistSans.variable} ${geistMono.variable} ${luckiestGuy.variable} ${kalam.variable} ${fredoka.variable}`}
         >
-            <body>{children}</body>
+            <body id="topo">
+                <a className="siteSkipLink" href="#conteudo">
+                    {site.header.skipLabel}
+                </a>
+
+                <Header
+                    brand={site.brand}
+                    navigation={site.navigation}
+                    contactAction={{
+                        label: site.header.contactLabel,
+                        href: contactUrl,
+                    }}
+                />
+
+                {children}
+
+                <Footer
+                    brand={site.brand}
+                    navigation={site.navigation}
+                    content={site.footer}
+                />
+            </body>
         </html>
     );
 }

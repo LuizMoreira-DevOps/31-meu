@@ -1,5 +1,5 @@
 .page {
-    padding: var(--space-12) var(--space-6);
+    padding: var(--space-12) var(--page-gutter);
     background-color: var(--color-surface-soft);
     color: var(--color-heading);
 }

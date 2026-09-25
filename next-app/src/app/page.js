@@ -1,8 +1,6 @@
-import Header from "@/components/layout/Header";
 import Hero from "@/components/home/Hero";
 import HomeSections from "@/components/home/HomeSections";
 import BackToTop from "@/components/layout/BackToTop";
-import Footer from "@/components/layout/Footer";
 
 import { getSiteContent, getHomeContent } from "@/lib/content";
 import { createWhatsAppUrl } from "@/lib/whatsapp";
@@ -20,25 +18,11 @@ export default async function HomePage() {
     );
 
     return (
-        <div id="topo" className={styles.home}>
-            <a className={styles.skipLink} href="#conteudo">
-                Pular para o conteúdo
-            </a>
-            <Header
-                brand={site.brand}
-                navigation={site.navigation}
-                variant="sketch"
-                contactAction={{ label: home.contactLabel, href: visitUrl }}
-            />
+        <div className={styles.home}>
             <main id="conteudo" tabIndex={-1}>
                 <Hero hero={home.hero} />
                 <HomeSections content={home} visitUrl={visitUrl} />
             </main>
-            <Footer
-                brand={site.brand}
-                navigation={site.navigation}
-                content={site.footer}
-            />
             <div className={styles.floatingActions}>
                 <a
                     className={styles.whatsappWidget}

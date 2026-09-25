@@ -3,18 +3,9 @@ import Image from "next/image";
 import MainNav from "./MainNav";
 import styles from "./Header.module.css";
 
-export default function Header({
-    brand,
-    navigation,
-    floatingBrand = false,
-    variant,
-    contactAction,
-}) {
-    const isSketch = variant === "sketch";
+export default function Header({ brand, navigation, contactAction }) {
     return (
-        <header
-            className={`${styles.header} ${floatingBrand ? styles.floatingBrand : ""} ${isSketch ? styles.sketch : ""}`}
-        >
+        <header className={styles.header}>
             <div className={styles.container}>
                 <Link
                     className={styles.brand}
