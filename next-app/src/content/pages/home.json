@@ -1,0 +1,135 @@
+{
+    "hero": {
+        "title": {
+            "highlight": "Festas reais",
+            "rest": "para infâncias incríveis"
+        },
+        "subtitle": "Um espaço para celebrar cada fase do seu pequeno e transformar a sua festa em uma lembrança especial.",
+        "image": {
+            "src": "/assets/images/festa-super-herois-lego.webp",
+            "alt": "Decoração de festa com super-heróis em estilo LEGO e arco de balões coloridos",
+            "width": 1800,
+            "height": 1202
+        },
+        "visitLabel": "Agende uma visita",
+        "packagesAction": {
+            "label": "Conheça os combos",
+            "href": "/pacotes"
+        },
+        "spaceAction": {
+            "label": "Quero conhecer o espaço",
+            "href": "#espaco"
+        }
+    },
+    "combos": {
+        "title": "Cada festa, uma nova aventura.",
+        "items": [
+            {
+                "id": "escolar",
+                "theme": "yellow"
+            },
+            {
+                "id": "pocket",
+                "theme": "coral"
+            },
+            {
+                "id": "premium",
+                "theme": "turquoise"
+            }
+        ]
+    },
+    "benefitsLabel": "Descubra o 31 Meu",
+    "benefits": [
+        {
+            "id": "espaco",
+            "icon": "home",
+            "theme": "pink",
+            "title": "Um espaço para celebrar",
+            "description": "Conheça o cenário da sua próxima festa."
+        },
+        {
+            "id": "combos",
+            "icon": "cake",
+            "theme": "yellow",
+            "title": "Combos para sua festa",
+            "description": "Explore as opções e encontre a sua combinação."
+        },
+        {
+            "id": "visita",
+            "icon": "heart",
+            "theme": "blue",
+            "title": "Vamos conversar",
+            "description": "Tire suas dúvidas e agende uma visita."
+        },
+        {
+            "id": "memorias",
+            "icon": "star",
+            "theme": "green",
+            "title": "Memórias em família",
+            "description": "Celebre uma nova fase com quem você ama."
+        }
+    ],
+    "space": {
+        "eyebrow": "Conheça",
+        "title": "Um espaço feito para grandes histórias",
+        "description": "Imagine sua próxima comemoração aqui. Venha conhecer o 31 Meu e conversar sobre a festa que você está planejando.",
+        "image": {
+            "src": "/assets/images/festa-super-herois-lego.webp",
+            "alt": "Decoração de festa com super-heróis em estilo LEGO e arco de balões coloridos",
+            "width": 1800,
+            "height": 1202
+        },
+        "actionLabel": "Agendar uma visita"
+    },
+    "differentials": {
+        "eyebrow": "Diferenciais",
+        "title": "Sua próxima festa começa com uma boa ideia",
+        "image": {
+            "src": "/assets/images/festa-super-herois-lego.webp",
+            "alt": "Decoração de festa com super-heróis em estilo LEGO e arco de balões coloridos",
+            "width": 1800,
+            "height": 1202
+        },
+        "items": [
+            {
+                "id": "imagine",
+                "icon": "balloon",
+                "theme": "purple",
+                "title": "Imagine a festa",
+                "description": "Compartilhe suas ideias para esse dia."
+            },
+            {
+                "id": "escolha",
+                "icon": "cake",
+                "theme": "pink",
+                "title": "Conheça os combos",
+                "description": "Veja as opções Escolar, Pocket e Premium."
+            },
+            {
+                "id": "celebre",
+                "icon": "smile",
+                "theme": "green",
+                "title": "Celebre junto",
+                "description": "Reserve tempo para criar boas memórias."
+            }
+        ]
+    },
+    "testimonials": {
+        "eyebrow": "Depoimentos",
+        "title": "Cada festa, uma história",
+        "description": "Um espaço para as experiências de quem celebrou com a gente.",
+        "emptyMessage": "Em breve, histórias de famílias que passaram pelo 31 Meu.",
+        "items": []
+    },
+    "closing": {
+        "title": "Vamos planejar uma festa incrível juntos?",
+        "description": "Fale com a nossa equipe e descubra as possibilidades para a sua próxima celebração.",
+        "actionLabel": "Falar pelo WhatsApp",
+        "image": {
+            "src": "/assets/images/festa-super-herois-lego.webp",
+            "alt": "Decoração de festa com super-heróis em estilo LEGO e arco de balões coloridos",
+            "width": 1800,
+            "height": 1202
+        }
+    }
+}

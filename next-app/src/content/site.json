@@ -1,0 +1,98 @@
+{
+    "header": {
+        "contactLabel": "Fale com a gente",
+        "skipLabel": "Pular para o conteúdo"
+    },
+    "socialLinks": [
+        {
+            "id": "instagram",
+            "label": "Instagram",
+            "handle": "@31meubuffet",
+            "href": "https://www.instagram.com/31meubuffet/"
+        },
+        {
+            "id": "facebook",
+            "label": "Facebook",
+            "handle": "31 MEU - Buffet Infantil",
+            "href": "https://www.facebook.com/Buffet31meu/"
+        }
+    ],
+    "location": {
+        "address": {
+            "street": "Rua Benjamin Zampieri Parizi",
+            "number": "76",
+            "neighborhood": "Santa Felicidade",
+            "city": "Curitiba",
+            "state": "PR",
+            "postalCode": "82400-090",
+            "country": "Brasil"
+        },
+        "openingHours": "Todos os dias, das 9h às 22h",
+        "coordinates": {
+            "latitude": -25.3974587,
+            "longitude": -49.3412299
+        }
+    },
+    "footer": {
+        "text": "31 Meu · Festas, encontros e boas memórias.",
+        "navigationLabel": "Navegação do rodapé"
+    },
+    "contact": {
+        "whatsapp": "5541997249945"
+    },
+    "messages": {
+        "scheduleVisit": "Olá! Visitei o site e gostaria de agendar uma visita ao 31 Meu."
+    },
+    "navigation": {
+        "openLabel": "Abrir menu",
+        "closeLabel": "Fechar menu",
+        "label": "Navegação principal",
+        "items": [
+            {
+                "id": "space",
+                "label": "O espaço",
+                "href": "/#espaco"
+            },
+            {
+                "id": "packages",
+                "label": "Combos",
+                "href": "/pacotes"
+            },
+            {
+                "id": "differentials",
+                "label": "Diferenciais",
+                "href": "/#diferenciais"
+            },
+            {
+                "id": "testimonials",
+                "label": "Depoimentos",
+                "href": "/#depoimentos"
+            },
+            {
+                "id": "faq",
+                "label": "Dúvidas",
+                "href": "/faq"
+            },
+            {
+                "id": "location",
+                "label": "Localização",
+                "href": "/localizacao"
+            },
+            {
+                "id": "contact",
+                "label": "Contato",
+                "href": "/contato"
+            }
+        ]
+    },
+    "brand": {
+        "name": "31 Meu",
+        "href": "/",
+        "homeLabel": "31 Meu — página inicial",
+        "logo": {
+            "src": "/assets/logo/Logo-31-Meu-Aquarela.svg",
+            "width": 600,
+            "height": 600
+        }
+    }
+}

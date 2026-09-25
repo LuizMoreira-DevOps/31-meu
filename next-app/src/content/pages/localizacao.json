@@ -1,0 +1,18 @@
+{
+    "eyebrow": "Venha conhecer",
+    "title": "Sua próxima festa começa aqui",
+    "description": "Estamos em Santa Felicidade, Curitiba. Veja como chegar ao 31 Meu e agende uma visita para conhecer o espaço.",
+    "map": {
+        "title": "Onde nos encontrar",
+        "description": "Explore o mapa ou abra as direções para planejar sua visita.",
+        "frameTitle": "Localização do 31 Meu Buffet Infantil"
+    },
+    "details": {
+        "title": "Planeje sua visita",
+        "addressLabel": "Nosso endereço",
+        "hoursLabel": "Horário de atendimento",
+        "directionsLabel": "Como chegar",
+        "visitLabel": "Agendar uma visita",
+        "note": "Combine sua visita com a nossa equipe pelo WhatsApp."
+    }
+}

@@ -1,11 +1,86 @@
 :root {
+    /*===========================================
+    FONTS
+    ===========================================*/
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
+    --font-display: var(--font-fredoka);
+    --font-handwritten: var(--font-kalam);
+    --font-size-display: clamp(2rem, 4vw, 4.5rem);
+    --font-size-lead: clamp(1.125rem, 2vw, 1.75rem);
+    --line-height-heading: 1.1;
+    --line-height-body: 1.5;
 
-    --color-background: #ffffff;
+    /*===========================================
+    Typography for sections and cards
+    ===========================================*/
+    --font-size-section: clamp(1.75rem, 2.5vw, 3rem);
+    --font-size-card-title: clamp(1.375rem, 1.8vw, 2rem);
+
+    /*===========================================
+    COLORS
+    ===========================================*/
+    --color-background: #fff;
     --color-text: #1f2937;
+    --color-surface-soft: #e0f7f7;
+    --color-heading: #000;
+    --color-surface-warm: #fff8ed;
+    --color-brand-turquoise: #007f83;
+    --color-action-yellow: #ffe24a;
+    --color-action-coral: #ff817a;
+    --color-ink: #252044;
+    --color-action-primary: #d90963;
+    --color-action-primary-hover: #b80753;
+    --color-on-action: #fff;
+    --color-focus: #34256c;
+    --color-focus-on-dark: #ffe5a6;
+    --color-brand-on-dark: #ffa9d3;
+    --color-border-subtle: rgb(37 32 68 / 8%);
 
+    /*===========================================
+    SPACING
+    ===========================================*/
+    --space-4: 1rem;
+    --space-6: 1.5rem;
+    --space-12: 3rem;
+
+    /*===========================================
+    LAYOUT
+    ===========================================*/
     --container-width: 1200px;
+    --page-gutter: clamp(1.25rem, 4vw, 4rem);
+
+    /*===========================================
+    HERO
+    ===========================================*/
+    --hero-padding-block-desktop: clamp(var(--space-6), 4vh, var(--space-12));
+    --hero-photo-max-height-desktop: 48vh;
+    --container-width-desktop: var(--container-width);
+
+    /*===========================================
+    COMBO CARD
+    ===========================================*/
+    --combo-card-min-height: 12rem;
+
+    /*===========================================
+    BRAND LOGO
+    ===========================================*/
+    --brand-logo-width: 4rem;
+    --brand-logo-width-desktop: 6rem;
+    --brand-surface-padding: 0.5rem;
+
+    /*===========================================
+    HEADER
+    ===========================================*/
+    --header-brand-clearance: calc(
+        var(--brand-logo-width-desktop) + var(--brand-surface-padding) * 2 +
+            var(--space-6)
+    );
+
+    /*===========================================
+    TEXTURE
+    ===========================================*/
+    --texture-paper: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.08' filter='url(%23grain)'/%3E%3C/svg%3E");
 }
 
 *,
@@ -47,4 +122,23 @@ select {
 a {
     color: inherit;
     text-decoration: none;
+}
+
+.siteSkipLink {
+    position: fixed;
+    top: -10rem;
+    left: 1rem;
+    z-index: 100;
+    max-width: calc(100% - 2rem);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: var(--color-surface-warm);
+    color: var(--color-ink);
+    font-weight: 600;
+}
+
+.siteSkipLink:focus {
+    top: 1rem;
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;
 }

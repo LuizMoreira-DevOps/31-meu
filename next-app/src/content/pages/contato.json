@@ -1,0 +1,70 @@
+{
+    "title": "Siga nossas redes",
+    "description": "Festas, novidades e momentos especiais do 31 Meu.",
+    "socialLabel": "Redes sociais do 31 Meu",
+    "form": {
+        "title": "Envie sua mensagem",
+        "description": "Tem uma dúvida, sugestão, elogio ou reclamação? Escreva para a gente.",
+        "requiredNote": "Nome, assunto e mensagem são obrigatórios.",
+        "fields": {
+            "name": {
+                "label": "Seu nome",
+                "placeholder": "Como podemos chamar você?"
+            },
+            "subject": {
+                "label": "Assunto",
+                "placeholder": "Selecione um assunto",
+                "options": [
+                    {
+                        "value": "duvida",
+                        "label": "Dúvida"
+                    },
+                    {
+                        "value": "sugestao",
+                        "label": "Sugestão"
+                    },
+                    {
+                        "value": "elogio",
+                        "label": "Elogio"
+                    },
+                    {
+                        "value": "reclamacao",
+                        "label": "Reclamação"
+                    },
+                    {
+                        "value": "outro",
+                        "label": "Outro"
+                    }
+                ]
+            },
+            "message": {
+                "label": "Mensagem",
+                "placeholder": "Conte para a gente como podemos ajudar."
+            },
+            "partyDate": {
+                "label": "Data da festa"
+            },
+            "partyTime": {
+                "label": "Horário da festa"
+            },
+            "birthdayPerson": {
+                "label": "Nome do aniversariante",
+                "placeholder": "Informe o nome"
+            },
+            "guardian": {
+                "label": "Nome da mãe, pai ou responsável",
+                "placeholder": "Informe o nome do responsável"
+            }
+        },
+        "optionalTitle": "Sobre a festa — opcional",
+        "optionalDescription": "Se sua mensagem for sobre uma festa específica, preencha os dados que souber.",
+        "submitLabel": "Enviar mensagem",
+        "submitNote": "Sua mensagem será preparada no WhatsApp. Confira e toque em enviar para concluir.",
+        "messageIntro": "Olá, equipe do 31 Meu!",
+        "validation": {
+            "nameRequired": "Informe seu nome.",
+            "subjectRequired": "Selecione um assunto.",
+            "messageRequired": "Escreva sua mensagem."
+        }
+    }
+}

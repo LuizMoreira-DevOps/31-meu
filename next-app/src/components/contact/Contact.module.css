@@ -1,0 +1,105 @@
+.contact {
+    padding: 1rem var(--page-gutter);
+    color: #252044;
+    background:
+        radial-gradient(ellipse at top center, #eee1ff 0, transparent 38rem),
+        #fff8ed;
+}
+
+.container {
+    max-width: 800px;
+    margin-inline: auto;
+}
+
+.intro {
+    max-width: 640px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.title {
+    margin: 0 0 1rem;
+    font-family: var(--font-display), var(--font-sans), sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+}
+
+.description {
+    margin: 0;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+}
+
+.socialNav {
+    max-width: 640px;
+    margin: 2rem auto 3rem;
+}
+
+.socialLinks {
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.socialLinks li {
+    min-width: 0;
+}
+
+.socialLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    height: 100%;
+    min-height: 112px;
+    padding: 1.5rem;
+
+    border: 1px solid #d7c5e8;
+    border-radius: 1.5rem;
+    background-color: #ffffff;
+    color: #252044;
+    text-align: center;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+
+    box-shadow: 0 6px 20px rgb(37 32 68 / 5%);
+}
+
+.socialLink:hover {
+    border-color: #b58bd5;
+    background-color: #f5edff;
+}
+
+.socialLink:focus-visible {
+    outline: 3px solid #6a27ab;
+    outline-offset: 4px;
+}
+
+.socialName {
+    font-family: var(--font-display), var(--font-sans), sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.socialName > span {
+    color: #d90963;
+}
+
+.socialHandle {
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+@media (min-width: 600px) {
+    .socialLinks {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

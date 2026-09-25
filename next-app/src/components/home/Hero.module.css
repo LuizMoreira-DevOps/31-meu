@@ -1,0 +1,135 @@
+.hero {
+    position: relative;
+    isolation: isolate;
+    background: linear-gradient(120deg, #e7e2ff, #fff0ce 55%, #ffcfda);
+    padding-bottom: 4rem;
+}
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: calc(var(--sketch-width) + 2 * var(--sketch-gutter));
+    margin: auto;
+    padding: 2rem var(--sketch-gutter);
+}
+.content {
+    max-width: 36rem;
+}
+.content h1 {
+    font: 600 clamp(2.6rem, 5vw, 4.6rem)/1.03 var(--sketch-display);
+    letter-spacing: -0.035em;
+    margin: 0 0 1.5rem;
+    text-wrap: balance;
+}
+.content p {
+    max-width: 28rem;
+    font-size: clamp(1rem, 1.4vw, 1.2rem);
+    line-height: 1.65;
+    margin: 0 0 1.75rem;
+}
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+.primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 0.95rem 1.5rem;
+    min-height: 48px;
+    border-radius: 999px;
+    background: var(--sketch-pink);
+    color: white;
+    font-weight: 650;
+}
+.primary:hover {
+    background: #b80753;
+}
+.secondary,
+.visitLink {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+    font-size: 0.95rem;
+}
+.visitLink {
+    margin-top: 1rem;
+}
+.photoFrame {
+    position: relative;
+    height: clamp(17rem, 60vw, 28rem);
+}
+.photo {
+    object-fit: cover;
+    object-position: 60% center;
+}
+.photoFrame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, #fff0ce, transparent 35%);
+}
+.wave {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    z-index: 3;
+    fill: var(--sketch-cream);
+    pointer-events: none;
+}
+@media (min-width: 900px) {
+    .hero {
+        min-height: 40rem;
+        display: flex;
+        align-items: center;
+        padding-block: 3rem 6rem;
+    }
+    .container {
+        width: 100%;
+    }
+    .content {
+        width: 47%;
+    }
+    .photoFrame {
+        position: absolute;
+        inset: 0 0 0 35%;
+        height: auto;
+        z-index: 0;
+    }
+    .photoFrame::after {
+        background: linear-gradient(
+            90deg,
+            #fff0ce 0%,
+            #fff0ceaa 16%,
+            transparent 45%
+        );
+    }
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(
+            90deg,
+            #ede5ff 0%,
+            #fff0ce 28%,
+            #fff0ceee 37%,
+            transparent 66%
+        );
+        pointer-events: none;
+    }
+}
+@media (max-width: 599px) {
+    .primary {
+        width: 100%;
+    }
+    .actions {
+        gap: 0.5rem;
+    }
+}
