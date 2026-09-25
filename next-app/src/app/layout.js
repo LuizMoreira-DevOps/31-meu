@@ -1,4 +1,10 @@
-import { Geist, Geist_Mono, Luckiest_Guy, Kalam } from "next/font/google";
+import {
+    Geist,
+    Geist_Mono,
+    Luckiest_Guy,
+    Kalam,
+    Fredoka,
+} from "next/font/google";
 
 import "@/css/global.css";
 
@@ -26,6 +32,13 @@ const kalam = Kalam({
     display: "swap",
 });
 
+const fredoka = Fredoka({
+    variable: "--font-fredoka",
+    subsets: ["latin"],
+    weight: ["500", "600"],
+    display: "swap",
+});
+
 export const metadata = {
     title: "31 Meu Buffet Infantil",
     description:
@@ -36,7 +49,7 @@ export default function RootLayout({ children }) {
     return (
         <html
             lang="pt-BR"
-            className={`${geistSans.variable} ${geistMono.variable} ${luckiestGuy.variable} ${kalam.variable}`}
+            className={`${geistSans.variable} ${geistMono.variable} ${luckiestGuy.variable} ${kalam.variable} ${fredoka.variable}`}
         >
             <body>{children}</body>
         </html>

@@ -16,9 +16,24 @@
                 "href": "/"
             },
             {
+                "id": "space",
+                "label": "O espaço",
+                "href": "/#espaco"
+            },
+            {
                 "id": "packages",
                 "label": "Combos",
                 "href": "/pacotes"
+            },
+            {
+                "id": "differentials",
+                "label": "Diferenciais",
+                "href": "/#diferenciais"
+            },
+            {
+                "id": "testimonials",
+                "label": "Depoimentos",
+                "href": "/#depoimentos"
             }
         ]
     },

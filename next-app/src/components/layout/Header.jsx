@@ -3,10 +3,17 @@ import Image from "next/image";
 import MainNav from "./MainNav";
 import styles from "./Header.module.css";
 
-export default function Header({ brand, navigation, floatingBrand = false }) {
+export default function Header({
+    brand,
+    navigation,
+    floatingBrand = false,
+    variant,
+    contactAction,
+}) {
+    const isSketch = variant === "sketch";
     return (
         <header
-            className={`${styles.header} ${floatingBrand ? styles.floatingBrand : ""}`}
+            className={`${styles.header} ${floatingBrand ? styles.floatingBrand : ""} ${isSketch ? styles.sketch : ""}`}
         >
             <div className={styles.container}>
                 <Link
@@ -23,8 +30,12 @@ export default function Header({ brand, navigation, floatingBrand = false }) {
                         sizes="(min-width: 900px) 96px, 80px"
                     />
                 </Link>
-
                 <MainNav navigation={navigation} />
+                {contactAction && (
+                    <a className={styles.contact} href={contactAction.href}>
+                        {contactAction.label}
+                    </a>
+                )}
             </div>
         </header>
     );

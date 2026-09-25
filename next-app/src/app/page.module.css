@@ -1,15 +1,127 @@
 .home {
+    --sketch-ink: #252044;
+    --sketch-pink: #d90963;
+    --sketch-cream: #fff8ed;
+    --sketch-width: 1200px;
+    --sketch-gutter: clamp(1.25rem, 4vw, 4rem);
+    --sketch-display: var(--font-fredoka), var(--font-sans), sans-serif;
+    color: var(--sketch-ink);
+    background: var(--sketch-cream);
+    background-image: radial-gradient(
+        ellipse at 0 0,
+        #dad8ff 0,
+        transparent 28rem
+    );
+}
+.home main {
+    min-width: 0;
+}
+.home section[id] {
+    scroll-margin-top: 1.5rem;
+}
+.home a:focus-visible,
+.home button:focus-visible {
+    outline: 3px solid #34256c;
+    outline-offset: 5px;
+}
+.skipLink {
+    position: absolute;
+    left: 1rem;
+    top: -10rem;
+    z-index: 20;
+    padding: 1rem;
+    background: white;
+}
+.skipLink:focus {
+    top: 1rem;
+}
+.footer {
+    background: #252044;
+    color: #fff8ed;
+    padding: 2.5rem var(--sketch-gutter);
+}
+.footerInner {
+    max-width: var(--sketch-width);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.footerBrand {
+    font-family: var(--sketch-display);
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffa9d3;
+}
+.footer nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+.footer nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+}
+.footer p {
+    flex-basis: 100%;
+    margin: 0;
+    font-size: 0.875rem;
+}
+.footer a:focus-visible {
+    outline-color: #ffe5a6;
+}
+
+.floatingActions {
+    position: fixed;
+    right: calc(1rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+    z-index: 15;
+
     display: flex;
     flex-direction: column;
-    min-width: 0;
+    align-items: center;
+    gap: 12px;
 }
 
-.hero {
-    min-width: 0;
+.whatsappWidget,
+.backToTop {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    padding: 0;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgb(37 32 68 / 16%);
 }
 
-@media (min-width: 900px) {
-    .hero {
-        order: -1;
-    }
+.whatsappWidget {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ffffff;
+    background-color: #128c4a;
+    color: #ffffff;
+}
+
+.whatsappWidget:hover {
+    background-color: #0d703b;
+}
+
+.backToTop {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #ded4ed;
+    background-color: var(--sketch-cream);
+    color: var(--sketch-ink);
+}
+
+.backToTop:hover {
+    background-color: #eee1ff;
+    border-color: #b7a0d6;
+}
+
+.floatingActions svg {
+    display: block;
 }

@@ -1,19 +1,55 @@
 "use client";
 
 import Link from "next/link";
-import { useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import styles from "./MainNav.module.css";
 
 export default function MainNav({ navigation }) {
     const [isOpen, setIsOpen] = useState(false);
     const menuId = useId();
     const buttonRef = useRef(null);
+    const listRef = useRef(null);
+
+    useEffect(() => {
+        const desktop = window.matchMedia("(min-width: 900px)");
+        function handleBreakpoint(event) {
+            const active = document.activeElement;
+            if (event.matches && active === buttonRef.current) {
+                listRef.current?.querySelector("a")?.focus();
+            } else if (!event.matches && listRef.current?.contains(active)) {
+                buttonRef.current?.focus();
+            }
+            setIsOpen(false);
+        }
+        desktop.addEventListener("change", handleBreakpoint);
+        return () => desktop.removeEventListener("change", handleBreakpoint);
+    }, []);
 
     function handleKeyDown(event) {
-        if (event.key === "Escape" && isOpen) {
-            setIsOpen(false);
+        if (
+            event.key !== "Escape" ||
+            !isOpen ||
+            window.matchMedia("(min-width: 900px)").matches
+        )
+            return;
+        event.preventDefault();
+        setIsOpen(false);
+        buttonRef.current?.focus();
+    }
+
+    function handleNavigate(event) {
+        if (
+            event.defaultPrevented ||
+            event.button !== 0 ||
+            event.metaKey ||
+            event.ctrlKey ||
+            event.shiftKey ||
+            event.altKey
+        )
+            return;
+        if (!window.matchMedia("(min-width: 900px)").matches)
             buttonRef.current?.focus();
-        }
+        setIsOpen(false);
     }
 
     return (
@@ -35,14 +71,18 @@ export default function MainNav({ navigation }) {
                     {isOpen ? navigation.closeLabel : navigation.openLabel}
                 </span>
             </button>
-
-            <ul id={menuId} className={styles.list} data-open={isOpen}>
+            <ul
+                ref={listRef}
+                id={menuId}
+                className={styles.list}
+                data-open={isOpen}
+            >
                 {navigation.items.map((item) => (
                     <li key={item.id}>
                         <Link
                             className={styles.link}
                             href={item.href}
-                            onClick={() => setIsOpen(false)}
+                            onClick={handleNavigate}
                         >
                             {item.label}
                         </Link>

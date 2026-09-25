@@ -1,69 +1,53 @@
 import Image from "next/image";
-import styles from "./Hero.module.css";
 import Link from "next/link";
+import styles from "./Hero.module.css";
 
-export default function Hero({ hero, visitUrl }) {
+export default function Hero({ hero }) {
     return (
-        <section className={styles.hero}>
+        <section className={styles.hero} aria-labelledby="hero-title">
+            <div className={styles.photoFrame}>
+                <Image
+                    className={styles.photo}
+                    src={hero.image.src}
+                    alt={hero.image.alt}
+                    fill
+                    sizes="(min-width: 900px) 65vw, 100vw"
+                    loading="eager"
+                    fetchPriority="high"
+                />
+            </div>
             <div className={styles.container}>
                 <div className={styles.content}>
-                    <h1>
-                        <span className={styles.titleHighlight}>
-                            {hero.title.highlight}
-                        </span>{" "}
-                        <span className={styles.titleRest}>
-                            {hero.title.rest}
-                        </span>
+                    <h1 id="hero-title">
+                        {hero.title.highlight} {hero.title.rest}
                     </h1>
                     <p>{hero.subtitle}</p>
                     <div className={styles.actions}>
-                        <a className={styles.visitButton} href={visitUrl}>
-                            {hero.visitLabel}
+                        <a
+                            className={styles.primary}
+                            href={hero.spaceAction.href}
+                        >
+                            {hero.spaceAction.label}
+                            <span aria-hidden="true">→</span>
                         </a>
-
                         <Link
-                            className={styles.packagesButton}
+                            className={styles.secondary}
                             href={hero.packagesAction.href}
                         >
                             {hero.packagesAction.label}
                         </Link>
                     </div>
                 </div>
-                <div className={styles.photoFrame}>
-                    <Image
-                        className={styles.photo}
-                        src={hero.image.src}
-                        alt={hero.image.alt}
-                        width={hero.image.width}
-                        height={hero.image.height}
-                        sizes="
-    (max-width: 599px) calc(100vw - 48px),
-    (max-width: 899px) 92vw,
-    (max-width: 1199px) calc(46vw - 12px),
-    (max-width: 1599px) 53.4vw,
-    (max-width: 1747px) calc(60vw - 105.6px),
-    944px
-"
-                    />
-
-                    <svg
-                        className={styles.photoStar}
-                        width="80"
-                        height="80"
-                        viewBox="0 0 100 100"
-                        aria-hidden="true"
-                        focusable="false"
-                    >
-                        <path
-                            d="M49 7 61 35 92 32 70 55 80 87 50 71 23 91 28 58 6 39 38 35Z"
-                            fill="var(--color-action-yellow)"
-                            stroke="var(--color-heading)"
-                            strokeWidth="3"
-                            strokeLinejoin="round"
-                        />
-                    </svg>
-                </div>
             </div>
+            <svg
+                className={styles.wave}
+                viewBox="0 0 1440 100"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+                focusable="false"
+            >
+                <path d="M0 55 C110 110 180 -15 300 25 S470 80 590 35 S770 80 910 38 S1110 -10 1240 50 S1380 95 1440 60 V100 H0Z" />
+            </svg>
         </section>
     );
 }

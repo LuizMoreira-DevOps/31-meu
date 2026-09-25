@@ -1,0 +1,288 @@
+.container {
+    width: calc(100% - 2 * var(--sketch-gutter));
+    max-width: var(--sketch-width);
+    margin-inline: auto;
+}
+.benefits {
+    padding: 1rem 0 3rem;
+}
+.benefitGrid,
+.cards {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    gap: 1.5rem;
+}
+.benefitGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    text-align: center;
+}
+.benefitGrid h2,
+.cards h3 {
+    font: 650 1rem/1.35 var(--font-sans);
+    margin: 0.9rem 0 0.4rem;
+}
+.benefitGrid p,
+.cards p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+.icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    margin-inline: auto;
+}
+.icon svg {
+    width: 2rem;
+    height: 2rem;
+}
+.pink {
+    color: #b30952;
+    background: #ffdbe9;
+}
+.yellow {
+    color: #855000;
+    background: #ffe6a4;
+}
+.blue {
+    color: #005b7b;
+    background: #c6efff;
+}
+.green {
+    color: #316119;
+    background: #dcf2c9;
+}
+.purple {
+    color: #6a27ab;
+    background: #ecddff;
+}
+.space {
+    padding-bottom: 3rem;
+}
+.spaceCard {
+    overflow: hidden;
+    border-radius: 2.5rem;
+    background: #714a33;
+    color: white;
+}
+.spacePhoto {
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+}
+.spaceText {
+    padding: 2rem;
+}
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.75rem;
+    font-weight: 650;
+    margin: 0 0 0.75rem;
+}
+.spaceText h2,
+.differentials h2,
+.testimonials h2,
+.closing h2 {
+    font: 550 clamp(2rem, 3.5vw, 3rem)/1.08 var(--sketch-display);
+    letter-spacing: -0.025em;
+    margin: 0 0 1rem;
+    text-wrap: balance;
+}
+.spaceText p,
+.testimonials p,
+.closing p {
+    line-height: 1.6;
+}
+.lightButton,
+.pinkButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    min-height: 48px;
+    padding: 0.8rem 1.3rem;
+    border-radius: 999px;
+    font-weight: 650;
+    font-size: 0.9rem;
+}
+.lightButton {
+    background: #fff3d9;
+    color: #252044;
+}
+.pinkButton {
+    background: var(--sketch-pink);
+    color: white;
+}
+.pinkButton:hover {
+    background: #b80753;
+}
+.differentials {
+    padding: 4rem 0;
+    background:
+        radial-gradient(ellipse at 0 65%, #d8f1f6, transparent 65%),
+        linear-gradient(160deg, #fff8ed 5%, #eee1ff 95%);
+    border-radius: 48% 8% 0 0 / 3rem 2rem 0 0;
+}
+.differentialsGrid {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+}
+.differentials .eyebrow {
+    color: #6a27ab;
+}
+.cards {
+    margin-top: 1.5rem;
+}
+.cards li {
+    background: #fff8ed;
+    padding: 1.5rem 1rem;
+    border-radius: 1.5rem;
+    text-align: center;
+}
+.organicPhoto {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 48% 52% 36% 64% / 39% 37% 63% 61%;
+    max-width: 28rem;
+    justify-self: center;
+}
+.testimonials {
+    background: linear-gradient(120deg, #d1eaff, #c5b8ff 70%, #e4d9ff);
+    padding: 4rem 0 6rem;
+    border-radius: 12% 30% 0 0 / 2rem 3rem 0 0;
+}
+.testimonialGrid {
+    display: grid;
+    align-items: center;
+    gap: 2rem;
+}
+.quotes {
+    display: grid;
+    gap: 1rem;
+    min-width: 0;
+}
+.quote {
+    margin: 0;
+    background: #fff8ed;
+    padding: 1.5rem;
+    border-radius: 1.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    align-items: center;
+}
+.quote > div {
+    flex: 1 1 12rem;
+}
+.quote blockquote {
+    margin: 0;
+}
+.quote p {
+    margin: 0 0 1rem;
+}
+.quote figcaption {
+    font-size: 0.85rem;
+}
+.quote figcaption span {
+    display: block;
+    margin-top: 0.25rem;
+}
+.portrait {
+    width: 120px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+.closing {
+    background: #dcd4ff;
+    padding-bottom: 0;
+}
+.closingCard {
+    position: relative;
+    top: -2rem;
+    margin-bottom: -2rem;
+    background: #ffe69c;
+    border-radius: 3rem 3rem 0 0;
+    overflow: hidden;
+    display: grid;
+}
+.closingText {
+    padding: 2.5rem 1.5rem;
+}
+.closingPhoto {
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+    border-radius: 45% 0 0 0;
+}
+@media (min-width: 600px) {
+    .cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+@media (min-width: 900px) {
+    .benefitGrid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 3rem;
+    }
+    .spaceCard {
+        position: relative;
+        min-height: 30rem;
+        display: flex;
+        align-items: center;
+        isolation: isolate;
+    }
+    .spacePhoto {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        z-index: -2;
+    }
+    .spaceCard::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            90deg,
+            #41271fe6,
+            #41271f88 40%,
+            transparent 75%
+        );
+        z-index: -1;
+    }
+    .spaceText {
+        width: 42%;
+        padding: 3rem;
+    }
+    .differentialsGrid {
+        grid-template-columns: 1.7fr 1fr;
+    }
+    .testimonialGrid {
+        grid-template-columns: 0.8fr 1.3fr;
+        gap: 4rem;
+    }
+    .closingCard {
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+    }
+    .closingText {
+        padding: 3rem;
+    }
+    .closingPhoto {
+        height: 100%;
+        min-height: 22rem;
+    }
+}
+@media (max-width: 359px) {
+    .benefitGrid {
+        grid-template-columns: 1fr;
+    }
+}
