@@ -1,0 +1,287 @@
+{
+    "guestPolicy": {
+        "title": "Contagem de convidados",
+        "items": [
+            "Pai, mãe e aniversariante não contabilizam.",
+            "Crianças até 5 anos não contabilizam.",
+            "Crianças de 6 a 9 anos contam como meia.",
+            "Convidados a partir de 10 anos são considerados pagantes."
+        ]
+    },
+    "sharedIncludes": {
+        "structure": {
+            "title": "Estrutura",
+            "items": [
+                "Área externa com playground",
+                "Recepção",
+                "Sala game",
+                "Área baby",
+                "Baladinha",
+                "Lavabo",
+                "Fraldário",
+                "Playground interno",
+                "Deck externo",
+                "Quadra de esporte",
+                "Sala de sinuca com TV",
+                "Som ambiente",
+                "Acesso para cadeirantes",
+                "Wi-Fi gratuito"
+            ]
+        },
+        "team": {
+            "title": "Equipe",
+            "items": [
+                "Gerente de festa",
+                "Recepção",
+                "Garçom",
+                "Monitoria infantil",
+                "Copa (equipe de cozinha)"
+            ]
+        }
+    },
+    "addons": [
+        {
+            "id": "candy-cart",
+            "label": "Carrinho de guloseimas"
+        },
+        {
+            "id": "painting-room",
+            "label": "Camarim de pintura"
+        },
+        {
+            "id": "recreation-workshops",
+            "label": "Oficinas de recreação"
+        },
+        {
+            "id": "recreation",
+            "label": "Recreação"
+        },
+        {
+            "id": "chocolate-fountain",
+            "label": "Cascata de chocolate"
+        },
+        {
+            "id": "crepes",
+            "label": "Crepes"
+        },
+        {
+            "id": "cotton-candy",
+            "label": "Algodão-doce"
+        },
+        {
+            "id": "pizza-rotation",
+            "label": "Rodízio de pizza"
+        },
+        {
+            "id": "draft-beer",
+            "label": "Chopp"
+        },
+        {
+            "id": "live-character",
+            "label": "Personagem vivo"
+        },
+        {
+            "id": "magician",
+            "label": "Mágico"
+        },
+        {
+            "id": "natural-flowers",
+            "label": "Arranjo de flores naturais"
+        },
+        {
+            "id": "custom-rug",
+            "label": "Tapete personalizado"
+        },
+        {
+            "id": "photo-frame",
+            "label": "Quadro fotográfico"
+        },
+        {
+            "id": "filming",
+            "label": "Filmagem"
+        },
+        {
+            "id": "photography",
+            "label": "Cobertura fotográfica"
+        }
+    ],
+    "combos": [
+        {
+            "id": "escolar",
+            "slug": "escolar",
+            "title": "Combo Escolar",
+            "eyebrow": "Segunda a quinta-feira",
+            "description": "Para o pequeno que, depois da aula, ainda tem muita diversão.",
+            "highlights": ["Mais prático", "Mais objetivo"],
+            "gastronomy": {
+                "title": "Gastronomia",
+                "items": [
+                    "Salgados fritos no momento do evento",
+                    "Assados",
+                    "Doces",
+                    "Bolo",
+                    "Lanchonete kids",
+                    "Água mineral",
+                    "Refrigerante: Coca-Cola, Guaraná e Fanta Laranja",
+                    "Suco",
+                    "Chá mate batido"
+                ]
+            },
+            "decoration": {
+                "title": "Decoração",
+                "items": [
+                    "Convite virtual",
+                    "Tema decorativo",
+                    "Centro de mesa",
+                    "Lembrancinhas",
+                    "Vídeo retrospectiva"
+                ]
+            },
+            "addonIds": [
+                "candy-cart",
+                "painting-room",
+                "recreation-workshops",
+                "recreation",
+                "chocolate-fountain",
+                "crepes",
+                "cotton-candy",
+                "pizza-rotation",
+                "draft-beer",
+                "live-character",
+                "magician",
+                "natural-flowers",
+                "custom-rug",
+                "photo-frame",
+                "filming",
+                "photography"
+            ],
+            "eventInfo": [
+                "Para até 15 adultos e 30 crianças, de segunda a quinta-feira.",
+                "Festa com 3 horas e 30 minutos de tolerância.",
+                "Acima de 30 crianças, entrar em contato para mais detalhes."
+            ]
+        },
+        {
+            "id": "pocket",
+            "slug": "pocket",
+            "title": "Combo Pocket",
+            "eyebrow": "Completo e acessível",
+            "description": "Para quem procura uma opção completa e acessível para curtir o dia do seu pequeno.",
+            "highlights": ["Completo", "Custo-benefício"],
+            "gastronomy": {
+                "title": "Gastronomia",
+                "items": [
+                    "Salgados fritos no momento do evento",
+                    "Assados",
+                    "Finger food",
+                    "Doces",
+                    "Bolo",
+                    "Lanchonete kids",
+                    "Mesa de café",
+                    "Água mineral",
+                    "Refrigerante: Coca-Cola, Guaraná e Fanta Laranja",
+                    "Suco",
+                    "Chá mate batido"
+                ]
+            },
+            "decoration": {
+                "title": "Decoração",
+                "items": [
+                    "Convite virtual",
+                    "Tema decorativo",
+                    "Centro de mesa",
+                    "Lembrancinhas",
+                    "Vídeo retrospectiva"
+                ]
+            },
+            "addonIds": [
+                "candy-cart",
+                "painting-room",
+                "recreation-workshops",
+                "recreation",
+                "chocolate-fountain",
+                "crepes",
+                "cotton-candy",
+                "pizza-rotation",
+                "draft-beer",
+                "live-character",
+                "magician",
+                "natural-flowers",
+                "custom-rug",
+                "photo-frame",
+                "filming",
+                "photography"
+            ],
+            "eventInfo": [
+                "Em dias úteis, a festa tem 3 horas e 30 minutos de tolerância.",
+                "Em fins de semana e feriados, a festa tem 4 horas e 30 minutos de tolerância.",
+                "A quantidade de convidados é confirmada no atendimento."
+            ]
+        },
+        {
+            "id": "premium",
+            "slug": "premium",
+            "title": "Combo Premium",
+            "eyebrow": "Mais completo",
+            "description": "Para quem busca uma festa dos sonhos com mais personalização e zero preocupação.",
+            "highlights": [
+                "Personalizado",
+                "Zero preocupação",
+                "Cobertura fotográfica"
+            ],
+            "gastronomy": {
+                "title": "Gastronomia",
+                "items": [
+                    "Entrada",
+                    "Salgados fritos no momento do evento",
+                    "Assados",
+                    "Finger food",
+                    "Doces",
+                    "Bolo",
+                    "Lanchonete kids",
+                    "Mesa de café",
+                    "Carrinho de guloseimas",
+                    "Água com e sem gás",
+                    "Refrigerante: Coca-Cola, Guaraná e Fanta Laranja",
+                    "Suco",
+                    "Chá mate batido"
+                ]
+            },
+            "decoration": {
+                "title": "Decoração",
+                "items": [
+                    "Convite virtual",
+                    "Tema decorativo",
+                    "Festa personalizada",
+                    "Doces decorados",
+                    "Kit papelaria",
+                    "Centro de mesa",
+                    "Lembrancinhas",
+                    "Vídeo retrospectiva"
+                ]
+            },
+            "includedAddonIds": ["candy-cart", "photography"],
+            "addonIds": [
+                "painting-room",
+                "recreation-workshops",
+                "recreation",
+                "chocolate-fountain",
+                "crepes",
+                "cotton-candy",
+                "pizza-rotation",
+                "draft-beer",
+                "live-character",
+                "magician",
+                "natural-flowers",
+                "custom-rug",
+                "photo-frame",
+                "filming"
+            ],
+            "eventInfo": [
+                "Em dias úteis, a festa tem 3 horas e 30 minutos de tolerância.",
+                "Em fins de semana e feriados, a festa tem 4 horas e 30 minutos de tolerância.",
+                "A quantidade de convidados é confirmada no atendimento."
+            ]
+        }
+    ]
+}
