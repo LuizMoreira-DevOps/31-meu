@@ -4,6 +4,8 @@ import { useRef, useState } from "react";
 
 import styles from "./PartyBuilder.module.css";
 
+import { getPartyReviewMessages } from "@/lib/party-builder";
+
 export default function PartyBuilder({
     combos,
     addons,
@@ -38,6 +40,8 @@ export default function PartyBuilder({
     const [partyDate, setPartyDate] = useState("");
 
     const [partyDateInvalid, setPartyDateInvalid] = useState(false);
+
+    const [partyDatePast, setPartyDatePast] = useState(false);
 
     const partyDateRef = useRef(null);
 
@@ -74,6 +78,13 @@ export default function PartyBuilder({
             selectedAddonIds.includes(addon.id),
     );
 
+    const reviewMessages = getPartyReviewMessages({
+        combo: selectedCombo,
+        adultsCount: adultsInvalid ? "" : adultsCount,
+        childrenCount: childrenInvalid ? "" : childrenCount,
+        partyDate: partyDateInvalid ? "" : partyDate,
+    });
+
     function handleAdultsChange(event) {
         const input = event.target;
 
@@ -97,9 +108,21 @@ export default function PartyBuilder({
 
     function handlePartyDateChange(event) {
         const input = event.target;
+        const now = new Date();
+
+        const today = Date.UTC(
+            now.getFullYear(),
+            now.getMonth(),
+            now.getDate(),
+        );
+
+        const selectedDate = input.valueAsNumber;
+
+        const isPast = Number.isFinite(selectedDate) && selectedDate < today;
 
         setPartyDate(input.value);
-        setPartyDateInvalid(!input.validity.valid);
+        setPartyDatePast(isPast);
+        setPartyDateInvalid(!input.validity.valid || isPast);
     }
 
     function clearPartyDate() {
@@ -110,6 +133,7 @@ export default function PartyBuilder({
 
         setPartyDate("");
         setPartyDateInvalid(false);
+        setPartyDatePast(false);
     }
 
     function handleAddonChange(addonId, checked) {
@@ -274,11 +298,13 @@ export default function PartyBuilder({
 
                 <div aria-live="polite">
                     <p id="party-date-status">
-                        {partyDateInvalid
-                            ? partyDetailsContent.dateInvalidMessage
-                            : !partyDate
-                              ? partyDetailsContent.dateUnknownLabel
-                              : ""}
+                        {partyDatePast
+                            ? partyDetailsContent.datePastMessage
+                            : partyDateInvalid
+                              ? partyDetailsContent.dateInvalidMessage
+                              : !partyDate
+                                ? partyDetailsContent.dateUnknownLabel
+                                : ""}
                     </p>
                 </div>
 
@@ -562,6 +588,20 @@ export default function PartyBuilder({
                                 <li key={condition}>{condition}</li>
                             ))}
                         </ul>
+
+                        <div role="status">
+                            {reviewMessages.length > 0 && (
+                                <div>
+                                    <h3>{summaryContent.reviewTitle}</h3>
+
+                                    <ul>
+                                        {reviewMessages.map((message) => (
+                                            <li key={message}>{message}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
+                        </div>
 
                         <p>{summaryContent.commercialNotice}</p>
                     </div>

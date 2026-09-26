@@ -155,6 +155,20 @@
                 "filming",
                 "photography"
             ],
+            "reviewRules": {
+                "adults": {
+                    "above": 15,
+                    "message": "A quantidade informada ultrapassa os 15 adultos previstos no Escolar. A equipe avaliará a composição dos convidados e as condições para sua festa."
+                },
+                "children": {
+                    "above": 30,
+                    "message": "Para mais de 30 crianças no Escolar, é necessário consultar a equipe sobre as condições da festa."
+                },
+                "weekdays": {
+                    "allowed": [1, 2, 3, 4],
+                    "message": "O Escolar está previsto de segunda a quinta-feira. A data escolhida precisa de avaliação da equipe."
+                }
+            },
             "eventInfo": [
                 "Para até 15 adultos e 30 crianças, de segunda a quinta-feira.",
                 "Festa com 3 horas e 30 minutos de tolerância.",

@@ -19,7 +19,8 @@
         "title": "Resumo das escolhas",
         "emptyMessage": "Nenhum adicional selecionado.",
         "conditionsTitle": "Condições do combo",
-        "commercialNotice": "Esta é uma solicitação de análise comercial. Valores e disponibilidade serão informados pela equipe. O preenchimento não confirma contratação ou reserva."
+        "commercialNotice": "Esta é uma solicitação de análise comercial. Valores e disponibilidade serão informados pela equipe. O preenchimento não confirma contratação ou reserva.",
+        "reviewTitle": "Pontos para avaliar com a equipe"
     },
     "partyDetails": {
         "requesterNameLabel": "Seu nome (obrigatório)",
@@ -45,6 +46,7 @@
         "birthdayAgeInvalidMessage": "Informe a idade em anos inteiros, igual ou maior que zero, ou deixe em branco.",
         "birthdayAgeInvalidSummary": "Revise a idade informada.",
         "dateInvalidMessage": "Complete uma data válida ou escolha Ainda não definida.",
-        "dateInvalidSummary": "Revise a data informada."
+        "dateInvalidSummary": "Revise a data informada.",
+        "datePastMessage": "A data informada já passou. Escolha hoje ou uma data futura, ou selecione Ainda não definida."
     }
 }
