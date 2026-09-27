@@ -5,6 +5,11 @@ import styles from "./Hero.module.css";
 export default function Hero({ hero }) {
     return (
         <section className={styles.hero} aria-labelledby="hero-title">
+            <div className={styles.decorations} aria-hidden="true">
+                <span className={styles.blobPink} />
+                <span className={styles.blobYellow} />
+                <span className={styles.dotPurple} />
+            </div>
             <div className={styles.photoFrame}>
                 <Image
                     className={styles.photo}
@@ -19,7 +24,10 @@ export default function Hero({ hero }) {
             <div className={styles.container}>
                 <div className={styles.content}>
                     <h1 id="hero-title">
-                        {hero.title.highlight} {hero.title.rest}
+                        <span className={styles.highlight}>
+                            {hero.title.highlight}
+                        </span>{" "}
+                        {hero.title.rest}
                     </h1>
                     <p>{hero.subtitle}</p>
                     <div className={styles.actions}>

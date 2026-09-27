@@ -1,37 +1,60 @@
 .hero {
     position: relative;
     isolation: isolate;
-    background: linear-gradient(120deg, #e7e2ff, #fff0ce 55%, #ffcfda);
+    overflow: hidden;
     padding-bottom: 4rem;
+
+    background:
+        radial-gradient(circle at 12% 18%, #e5ddff 0, transparent 22rem),
+        radial-gradient(circle at 72% 8%, #ffd6e4 0, transparent 24rem),
+        var(--color-surface-warm);
 }
+
 .container {
     position: relative;
-    z-index: 2;
-    max-width: calc(var(--sketch-width) + 2 * var(--sketch-gutter));
-    margin: auto;
-    padding: 2rem var(--sketch-gutter);
+    z-index: 3;
+    max-width: calc(var(--container-width) + 2 * var(--page-gutter));
+    margin-inline: auto;
+    padding: 2.5rem var(--page-gutter);
 }
+
 .content {
-    max-width: 36rem;
+    position: relative;
+    z-index: 3;
+    max-width: 38rem;
 }
+
 .content h1 {
-    font: 600 clamp(2.6rem, 5vw, 4.6rem)/1.03 var(--sketch-display);
-    letter-spacing: -0.035em;
     margin: 0 0 1.5rem;
+
+    font:
+        600 clamp(2.8rem, 5vw, 5rem) / 0.98 var(--font-display),
+        var(--font-sans),
+        sans-serif;
+
+    letter-spacing: -0.045em;
     text-wrap: balance;
 }
+
 .content p {
     max-width: 28rem;
     font-size: clamp(1rem, 1.4vw, 1.2rem);
     line-height: 1.65;
     margin: 0 0 1.75rem;
 }
+
+.highlight {
+    display: inline-block;
+    color: var(--color-action-primary);
+}
+
 .actions {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
 }
+
 .primary {
     display: inline-flex;
     align-items: center;
@@ -40,13 +63,15 @@
     padding: 0.95rem 1.5rem;
     min-height: 48px;
     border-radius: 999px;
-    background: var(--sketch-pink);
-    color: white;
+    background: var(--color-action-primary);
+    color: var(--color-on-action);
     font-weight: 650;
 }
+
 .primary:hover {
-    background: #b80753;
+    background: var(--color-action-primary-hover);
 }
+
 .secondary,
 .visitLink {
     display: inline-flex;
@@ -56,23 +81,30 @@
     text-underline-offset: 0.25rem;
     font-size: 0.95rem;
 }
+
 .visitLink {
     margin-top: 1rem;
 }
+
 .photoFrame {
     position: relative;
-    height: clamp(17rem, 60vw, 28rem);
+    z-index: 2;
+
+    width: calc(100% - 2 * var(--page-gutter));
+    height: clamp(19rem, 62vw, 30rem);
+
+    margin-inline: auto;
+
+    overflow: hidden;
+
+    border-radius: 42% 58% 20% 80% / 34% 24% 76% 66%;
 }
+
 .photo {
     object-fit: cover;
     object-position: 60% center;
 }
-.photoFrame::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(0deg, #fff0ce, transparent 35%);
-}
+
 .wave {
     position: absolute;
     bottom: -1px;
@@ -80,55 +112,107 @@
     width: 100%;
     height: 4rem;
     z-index: 3;
-    fill: var(--sketch-cream);
+    fill: var(--color-surface-warm);
     pointer-events: none;
 }
+
+.decorations {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.blobPink,
+.blobYellow,
+.dotPurple {
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+}
+
+.blobPink {
+    width: 12rem;
+    height: 12rem;
+    top: -5rem;
+    right: 8%;
+    background: #ffc7dc;
+    filter: blur(1px);
+}
+
+.blobYellow {
+    width: 9rem;
+    height: 9rem;
+    left: -3rem;
+    bottom: 6rem;
+    background: #ffe59a;
+}
+
+.dotPurple {
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 24%;
+    left: 48%;
+    background: #8f72d8;
+}
+
 @media (min-width: 900px) {
     .hero {
-        min-height: 40rem;
+        min-height: 42rem;
         display: flex;
         align-items: center;
-        padding-block: 3rem 6rem;
+        padding-block: 4rem 6rem;
     }
+
     .container {
         width: 100%;
     }
+
     .content {
-        width: 47%;
+        width: 45%;
     }
+
     .photoFrame {
         position: absolute;
-        inset: 0 0 0 35%;
+
+        top: 3rem;
+        right: -4rem;
+        bottom: 5rem;
+        left: 48%;
+
+        width: auto;
         height: auto;
-        z-index: 0;
+
+        margin: 0;
+
+        border-radius: 42% 58% 28% 72% / 34% 30% 70% 66%;
     }
-    .photoFrame::after {
-        background: linear-gradient(
-            90deg,
-            #fff0ce 0%,
-            #fff0ceaa 16%,
-            transparent 45%
-        );
+
+    .photo {
+        object-position: center;
     }
-    .hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        z-index: 1;
-        background: linear-gradient(
-            90deg,
-            #ede5ff 0%,
-            #fff0ce 28%,
-            #fff0ceee 37%,
-            transparent 66%
-        );
-        pointer-events: none;
+
+    .blobPink {
+        top: -6rem;
+        right: 18%;
+    }
+
+    .blobYellow {
+        left: 38%;
+        bottom: -2rem;
+    }
+
+    .dotPurple {
+        top: 18%;
+        left: 46%;
     }
 }
+
 @media (max-width: 599px) {
     .primary {
         width: 100%;
     }
+
     .actions {
         gap: 0.5rem;
     }

@@ -1,12 +1,6 @@
 .home {
-    --sketch-ink: var(--color-ink);
-    --sketch-pink: var(--color-action-primary);
-    --sketch-cream: var(--color-surface-warm);
-    --sketch-width: var(--container-width);
-    --sketch-gutter: var(--page-gutter);
-    --sketch-display: var(--font-display), var(--font-sans), sans-serif;
-    color: var(--sketch-ink);
-    background: var(--sketch-cream);
+    color: var(--color-ink);
+    background: var(--color-surface-warm);
     background-image: radial-gradient(
         ellipse at 0 0,
         #dad8ff 0,
@@ -24,7 +18,7 @@
 
 .home a:focus-visible,
 .home button:focus-visible {
-    outline: 3px solid #34256c;
+    outline: 3px solid var(--color-focus);
     outline-offset: 5px;
 }
 
@@ -67,8 +61,8 @@
     width: 48px;
     height: 48px;
     border: 1px solid #ded4ed;
-    background-color: var(--sketch-cream);
-    color: var(--sketch-ink);
+    background-color: var(--color-surface-warm);
+    color: var(--color-ink);
 }
 
 .backToTop:hover {

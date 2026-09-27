@@ -1,6 +1,6 @@
 .container {
-    width: calc(100% - 2 * var(--sketch-gutter));
-    max-width: var(--sketch-width);
+    width: calc(100% - 2 * var(--page-gutter));
+    max-width: var(--container-width);
     margin-inline: auto;
 }
 .benefits {
@@ -89,7 +89,10 @@
 .differentials h2,
 .testimonials h2,
 .closing h2 {
-    font: 550 clamp(2rem, 3.5vw, 3rem)/1.08 var(--sketch-display);
+    font:
+        550 clamp(2rem, 3.5vw, 3rem)/1.08 var(--font-display),
+        var(--font-sans),
+        sans-serif;
     letter-spacing: -0.025em;
     margin: 0 0 1rem;
     text-wrap: balance;
@@ -116,11 +119,11 @@
     color: #252044;
 }
 .pinkButton {
-    background: var(--sketch-pink);
+    background: var(--color-action-primary);
     color: white;
 }
 .pinkButton:hover {
-    background: #b80753;
+    background: var(--color-action-primary-hover);
 }
 .differentials {
     padding: 4rem 0;
