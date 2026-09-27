@@ -62,7 +62,7 @@
     gap: 1.25rem;
     padding: 0.95rem 1.5rem;
     min-height: 48px;
-    border-radius: 999px;
+    border-radius: var(--radius-pill);
     background: var(--color-action-primary);
     color: var(--color-on-action);
     font-weight: 650;

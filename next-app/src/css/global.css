@@ -1,7 +1,7 @@
 :root {
     /*===========================================
-    FONTS
-    ===========================================*/
+FONTS
+===========================================*/
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
     --font-display: var(--font-fredoka);
@@ -12,15 +12,14 @@
     --line-height-body: 1.5;
 
     /*===========================================
-    Typography for sections and cards
-    ===========================================*/
+Typography for sections and cards
+===========================================*/
     --font-size-section: clamp(1.75rem, 2.5vw, 3rem);
     --font-size-card-title: clamp(1.375rem, 1.8vw, 2rem);
 
     /*===========================================
 COLORS
 ===========================================*/
-
     --color-background: #fff;
     --color-text: #1f2937;
     --color-heading: #000;
@@ -55,7 +54,6 @@ COLORS
     /*===========================================
 SPACING
 ===========================================*/
-
     --space-4: 1rem;
     --space-6: 1.5rem;
     --space-12: 3rem;
@@ -63,7 +61,6 @@ SPACING
     /*===========================================
 SHAPE
 ===========================================*/
-
     --radius-control: 0.75rem;
     --radius-card: 1.5rem;
     --radius-pill: 999px;
@@ -71,7 +68,6 @@ SHAPE
     /*===========================================
 SHADOWS
 ===========================================*/
-
     --shadow-soft: 0 10px 30px rgb(37 32 68 / 10%);
     --shadow-floating: 0 16px 40px rgb(37 32 68 / 16%);
 
@@ -82,35 +78,36 @@ SHADOWS
     --page-gutter: clamp(1.25rem, 4vw, 4rem);
 
     /*===========================================
-    HERO
-    ===========================================*/
+HERO
+===========================================*/
     --hero-padding-block-desktop: clamp(var(--space-6), 4vh, var(--space-12));
     --hero-photo-max-height-desktop: 48vh;
     --container-width-desktop: var(--container-width);
 
     /*===========================================
-    COMBO CARD
-    ===========================================*/
+COMBO CARD
+===========================================*/
     --combo-card-min-height: 12rem;
 
     /*===========================================
-    BRAND LOGO
-    ===========================================*/
+BRAND LOGO
+===========================================*/
     --brand-logo-width: 4rem;
     --brand-logo-width-desktop: 6rem;
     --brand-surface-padding: 0.5rem;
 
     /*===========================================
-    HEADER
-    ===========================================*/
+HEADER
+===========================================*/
     --header-brand-clearance: calc(
         var(--brand-logo-width-desktop) + var(--brand-surface-padding) * 2 +
             var(--space-6)
     );
+    --header-height: 96px;
 
     /*===========================================
-    TEXTURE
-    ===========================================*/
+TEXTURE
+===========================================*/
     --texture-paper: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.08' filter='url(%23grain)'/%3E%3C/svg%3E");
 }
 
