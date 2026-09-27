@@ -48,5 +48,15 @@
         "dateInvalidMessage": "Complete uma data válida ou escolha Ainda não definida.",
         "dateInvalidSummary": "Revise a data informada.",
         "datePastMessage": "A data informada já passou. Escolha hoje ou uma data futura, ou selecione Ainda não definida."
+    },
+    "whatsapp": {
+        "submitLabel": "Consultar minha festa no WhatsApp",
+        "submitNote": "Você poderá revisar a mensagem no WhatsApp antes de enviá-la.",
+        "messageIntro": "Olá! Montei uma proposta de festa pelo site do 31 Meu e gostaria de consultar valores e disponibilidade.",
+        "comboLabel": "Combo:",
+        "includedTitle": "Itens incluídos no combo:",
+        "selectedAddonsTitle": "Opcionais escolhidos:",
+        "noAddonsLabel": "Nenhum opcional selecionado.",
+        "reviewTitle": "Pontos para avaliar com a equipe:"
     }
 }

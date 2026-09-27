@@ -3,15 +3,19 @@ import {
     getComboBySlug,
     getCombosContent,
     getPartyBuilderContent,
+    getSiteContent,
 } from "@/lib/content";
 
 export default async function PartyBuilderPage({ searchParams }) {
     const params = await searchParams;
     const comboSlug = typeof params?.combo === "string" ? params.combo : "";
 
-    const combo = await getComboBySlug(comboSlug);
-    const catalog = await getCombosContent();
-    const content = await getPartyBuilderContent();
+    const [combo, catalog, content, site] = await Promise.all([
+        getComboBySlug(comboSlug),
+        getCombosContent(),
+        getPartyBuilderContent(),
+        getSiteContent(),
+    ]);
 
     const initialComboSlug = combo?.slug ?? "";
 
@@ -28,6 +32,8 @@ export default async function PartyBuilderPage({ searchParams }) {
                 addonsContent={content.addons}
                 summaryContent={content.summary}
                 partyDetailsContent={content.partyDetails}
+                phone={site.contact.whatsapp}
+                whatsappContent={content.whatsapp}
             />
         </main>
     );

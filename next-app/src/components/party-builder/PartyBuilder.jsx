@@ -4,7 +4,28 @@ import { useRef, useState } from "react";
 
 import styles from "./PartyBuilder.module.css";
 
+import { createWhatsAppUrl } from "@/lib/whatsapp";
+
 import { getPartyReviewMessages } from "@/lib/party-builder";
+
+function getPartyDateValidation(input) {
+    const now = new Date();
+
+    const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+
+    const selectedDate = input.valueAsNumber;
+
+    const isPast = Number.isFinite(selectedDate) && selectedDate < today;
+
+    return {
+        isPast,
+        invalid: !input.validity.valid || isPast,
+    };
+}
+
+function formatPartyDate(value) {
+    return value.split("-").reverse().join("/");
+}
 
 export default function PartyBuilder({
     combos,
@@ -14,6 +35,8 @@ export default function PartyBuilder({
     addonsContent,
     summaryContent,
     partyDetailsContent,
+    whatsappContent,
+    phone,
 }) {
     const [observations, setObservations] = useState("");
 
@@ -108,21 +131,11 @@ export default function PartyBuilder({
 
     function handlePartyDateChange(event) {
         const input = event.target;
-        const now = new Date();
-
-        const today = Date.UTC(
-            now.getFullYear(),
-            now.getMonth(),
-            now.getDate(),
-        );
-
-        const selectedDate = input.valueAsNumber;
-
-        const isPast = Number.isFinite(selectedDate) && selectedDate < today;
+        const validation = getPartyDateValidation(input);
 
         setPartyDate(input.value);
-        setPartyDatePast(isPast);
-        setPartyDateInvalid(!input.validity.valid || isPast);
+        setPartyDatePast(validation.isPast);
+        setPartyDateInvalid(validation.invalid);
     }
 
     function clearPartyDate() {
@@ -207,8 +220,163 @@ export default function PartyBuilder({
         setComboChangeMessages(messages);
     }
 
+    function handleSubmit(event) {
+        event.preventDefault();
+
+        const form = event.currentTarget;
+
+        const comboInput = form.elements.namedItem("combo");
+        const requesterInput = form.elements.namedItem("requesterName");
+        const dateInput = form.elements.namedItem("partyDate");
+        const adultsInput = form.elements.namedItem("adultsCount");
+        const childrenInput = form.elements.namedItem("childrenCount");
+        const birthdayAgeInput = form.elements.namedItem("birthdayAge");
+
+        setComboTouched(true);
+        setRequesterNameTouched(true);
+
+        const dateValidation = getPartyDateValidation(dateInput);
+
+        const nextAdultsInvalid = !adultsInput.validity.valid;
+        const nextChildrenInvalid = !childrenInput.validity.valid;
+        const nextBirthdayAgeInvalid = !birthdayAgeInput.validity.valid;
+
+        const finalReviewMessages = getPartyReviewMessages({
+            combo: selectedCombo,
+            adultsCount: nextAdultsInvalid ? "" : adultsCount,
+            childrenCount: nextChildrenInvalid ? "" : childrenCount,
+            partyDate: dateValidation.invalid ? "" : partyDate,
+        });
+
+        setPartyDateInvalid(dateValidation.invalid);
+        setPartyDatePast(dateValidation.isPast);
+        setAdultsInvalid(nextAdultsInvalid);
+        setChildrenInvalid(nextChildrenInvalid);
+        setBirthdayAgeInvalid(nextBirthdayAgeInvalid);
+
+        const validationOrder = [
+            {
+                element: comboInput,
+                invalid: !selectedCombo,
+            },
+            {
+                element: requesterInput,
+                invalid: requesterName.trim() === "",
+            },
+            {
+                element: dateInput,
+                invalid: dateValidation.invalid,
+            },
+            {
+                element: adultsInput,
+                invalid: nextAdultsInvalid,
+            },
+            {
+                element: childrenInput,
+                invalid: nextChildrenInvalid,
+            },
+            {
+                element: birthdayAgeInput,
+                invalid: nextBirthdayAgeInvalid,
+            },
+        ];
+
+        const firstInvalidField = validationOrder.find(
+            ({ invalid }) => invalid,
+        );
+
+        if (firstInvalidField) {
+            firstInvalidField.element?.focus();
+            return;
+        }
+
+        const includedAddons = summaryAddons.filter((addon) =>
+            includedAddonIds.includes(addon.id),
+        );
+
+        const selectedOptionalAddons = summaryAddons.filter(
+            (addon) =>
+                selectedAddonIds.includes(addon.id) &&
+                !includedAddonIds.includes(addon.id),
+        );
+
+        const lines = [
+            whatsappContent.messageIntro,
+            "",
+            `${partyDetailsContent.requesterNameSummaryLabel} ${requesterName.trim()}`,
+            `${whatsappContent.comboLabel} ${selectedCombo.title}`,
+            `${partyDetailsContent.dateSummaryLabel} ${
+                partyDate
+                    ? formatPartyDate(partyDate)
+                    : partyDetailsContent.dateUnknownLabel
+            }`,
+            `${partyDetailsContent.adultsSummaryLabel} ${
+                adultsCount === ""
+                    ? partyDetailsContent.quantityUnknownLabel
+                    : adultsCount
+            }`,
+            `${partyDetailsContent.childrenSummaryLabel} ${
+                childrenCount === ""
+                    ? partyDetailsContent.quantityUnknownLabel
+                    : childrenCount
+            }`,
+        ];
+
+        if (birthdayName.trim()) {
+            lines.push(
+                `${partyDetailsContent.birthdayNameSummaryLabel} ${birthdayName.trim()}`,
+            );
+        }
+
+        if (birthdayAge !== "") {
+            lines.push(
+                `${partyDetailsContent.birthdayAgeSummaryLabel} ${birthdayAge}`,
+            );
+        }
+
+        if (includedAddons.length > 0) {
+            lines.push(
+                "",
+                whatsappContent.includedTitle,
+                ...includedAddons.map((addon) => `• ${addon.label}`),
+            );
+        }
+
+        lines.push("", whatsappContent.selectedAddonsTitle);
+
+        if (selectedOptionalAddons.length > 0) {
+            lines.push(
+                ...selectedOptionalAddons.map((addon) => `• ${addon.label}`),
+            );
+        } else {
+            lines.push(whatsappContent.noAddonsLabel);
+        }
+
+        if (observations.trim()) {
+            lines.push(
+                "",
+                partyDetailsContent.observationsSummaryLabel,
+                observations.trim(),
+            );
+        }
+
+        if (finalReviewMessages.length > 0) {
+            lines.push(
+                "",
+                whatsappContent.reviewTitle,
+                ...finalReviewMessages.map((message) => `• ${message}`),
+            );
+        }
+
+        lines.push("", summaryContent.commercialNotice);
+
+        const url = createWhatsAppUrl(phone, lines.join("\n"));
+
+        window.location.assign(url);
+    }
+
     return (
-        <div>
+        <form onSubmit={handleSubmit} noValidate>
             <label htmlFor="party-combo">{content.label}</label>
 
             <select
@@ -607,6 +775,14 @@ export default function PartyBuilder({
                     </div>
                 </section>
             )}
-        </div>
+
+            <div>
+                <button type="submit" aria-describedby="party-whatsapp-note">
+                    {whatsappContent.submitLabel}
+                </button>
+
+                <p id="party-whatsapp-note">{whatsappContent.submitNote}</p>
+            </div>
+        </form>
     );
 }
