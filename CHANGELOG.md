@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/LuizMoreira-DevOps/31-meu/compare/v1.2.0...v1.3.0) (2026-09-27)
+
+
+### Features
+
+* add combo catalog and party builder WhatsApp flow ([#50](https://github.com/LuizMoreira-DevOps/31-meu/issues/50)) ([6f459c0](https://github.com/LuizMoreira-DevOps/31-meu/commit/6f459c0d41c3713407510425a932b19a18f21ac6))
+
 ## [1.2.0](https://github.com/LuizMoreira-DevOps/31-meu/compare/v1.1.0...v1.2.0) (2026-09-25)
 
 
