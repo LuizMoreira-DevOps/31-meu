@@ -45,7 +45,7 @@
 
 .highlight {
     display: inline-block;
-    color: var(--color-action-primary);
+    color: var(--color-highlight);
 }
 
 .actions {

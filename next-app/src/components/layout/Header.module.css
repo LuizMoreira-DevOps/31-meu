@@ -1,7 +1,18 @@
 .header {
-    padding: 1rem var(--page-gutter);
+    position: relative;
+    z-index: 20;
+
+    padding: 0.85rem var(--page-gutter);
+
     color: var(--color-ink);
-    background: var(--color-surface-warm);
+    background:
+        radial-gradient(
+            circle at 8% 0%,
+            var(--color-surface-lilac),
+            transparent 14rem
+        ),
+        var(--color-surface-warm);
+
     border-bottom: 1px solid var(--color-border-subtle);
 }
 
@@ -10,7 +21,8 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem 1.5rem;
+    gap: 0.75rem 1.5rem;
+
     width: 100%;
     max-width: var(--container-width);
     margin-inline: auto;
@@ -21,9 +33,21 @@
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
+
     min-width: 44px;
     min-height: 44px;
-    border-radius: 1rem;
+    padding: 0.35rem;
+
+    border-radius: var(--radius-card);
+
+    transition:
+        transform 180ms ease,
+        background-color 180ms ease;
+}
+
+.brand:hover {
+    transform: translateY(-2px);
+    background: rgb(255 255 255 / 55%);
 }
 
 .logo {
@@ -36,20 +60,33 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
+
     min-height: 44px;
-    padding: 0.75rem 1.25rem;
-    border-radius: 999px;
+    padding: 0.75rem 1.3rem;
+
+    border-radius: var(--radius-pill);
+
     background: var(--color-action-primary);
     color: var(--color-on-action);
+
+    box-shadow: var(--shadow-soft);
+
     font-size: 0.875rem;
     font-weight: 700;
     line-height: 1.4;
     text-align: center;
-    text-decoration: none;
+
+    transition:
+        transform 180ms ease,
+        background-color 180ms ease,
+        box-shadow 180ms ease;
 }
 
 .contact:hover {
+    transform: translateY(-2px);
     background: var(--color-action-primary-hover);
+    box-shadow: var(--shadow-floating);
 }
 
 .brand:focus-visible,
@@ -60,9 +97,7 @@
 
 @media (min-width: 900px) {
     .container {
-        display: flex;
         flex-wrap: nowrap;
-        gap: 1.5rem;
     }
 
     .logo {
@@ -70,7 +105,6 @@
     }
 
     .contact {
-        flex-shrink: 0;
         white-space: nowrap;
     }
 }

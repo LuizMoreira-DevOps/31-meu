@@ -1,4 +1,199 @@
+.form {
+    display: grid;
+    gap: 1.25rem;
+
+    padding: clamp(1.25rem, 3vw, 2.5rem);
+
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-card);
+
+    background: var(--color-background);
+    box-shadow: var(--shadow-soft);
+}
+
+.form label,
+.form legend {
+    color: var(--color-ink);
+    font-weight: 700;
+}
+
+.form input,
+.form select,
+.form textarea {
+    width: 100%;
+    min-height: 48px;
+    margin-top: 0.45rem;
+    padding: 0.8rem 0.9rem;
+
+    border: 1px solid rgb(37 32 68 / 20%);
+    border-radius: var(--radius-control);
+
+    background: var(--color-background);
+    color: var(--color-ink);
+}
+
+.form textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
+
+.form input:hover,
+.form select:hover,
+.form textarea:hover {
+    border-color: rgb(37 32 68 / 40%);
+}
+
+.form input:focus-visible,
+.form select:focus-visible,
+.form textarea:focus-visible,
+.form button:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;
+}
+
+.form [aria-invalid="true"] {
+    border-color: var(--color-danger);
+}
+
+.form button {
+    min-height: 44px;
+    padding: 0.7rem 1rem;
+
+    border: 0;
+    border-radius: var(--radius-pill);
+
+    background: var(--color-surface-lilac);
+    color: var(--color-ink);
+
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background: #ddc8fb;
+}
+
+.form p {
+    line-height: 1.6;
+}
+
+.form ul {
+    line-height: 1.65;
+}
+
+.addons {
+    margin: var(--space-4) 0 0;
+    padding: var(--space-6);
+
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-card);
+
+    background: var(--color-surface-lilac);
+}
+
+.addons legend {
+    padding-inline: 0.5rem;
+
+    font-family: var(--font-display), var(--font-sans), sans-serif;
+    font-size: 1.35rem;
+}
+
+.addons ul {
+    display: grid;
+    gap: 0.75rem;
+
+    margin: var(--space-4) 0 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.addons label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+
+    padding: 0.75rem;
+
+    border-radius: var(--radius-control);
+
+    background: rgb(255 255 255 / 60%);
+}
+
+.addons input[type="checkbox"] {
+    width: 1.25rem;
+    min-height: auto;
+    height: 1.25rem;
+    margin: 0.15rem 0 0;
+    padding: 0;
+
+    flex-shrink: 0;
+}
+
+.summary {
+    margin-top: var(--space-6);
+    padding: clamp(1.5rem, 3vw, 2.25rem);
+
+    border-radius: var(--radius-card);
+
+    background: var(--color-surface-green);
+}
+
+.summary h2,
+.summary h3 {
+    font-family: var(--font-display), var(--font-sans), sans-serif;
+    color: var(--color-ink);
+}
+
+.summary h2 {
+    margin-top: 0;
+    font-size: var(--font-size-card-title);
+}
+
+.summary h3 {
+    margin-top: var(--space-6);
+}
+
 .observationsText {
     white-space: pre-wrap;
     overflow-wrap: anywhere;
+}
+
+.submitArea {
+    display: grid;
+    gap: 0.75rem;
+
+    margin-top: var(--space-6);
+    padding-top: var(--space-6);
+
+    border-top: 1px solid var(--color-border-subtle);
+}
+
+.submitArea button {
+    min-height: 52px;
+
+    background: var(--color-action-primary);
+    color: var(--color-on-action);
+
+    box-shadow: var(--shadow-soft);
+
+    font-size: 1rem;
+}
+
+.submitArea button:hover {
+    background: var(--color-action-primary-hover);
+    box-shadow: var(--shadow-floating);
+}
+
+.submitArea p {
+    margin: 0;
+
+    color: rgb(37 32 68 / 70%);
+    font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+    .form {
+        padding: 2.5rem;
+    }
 }

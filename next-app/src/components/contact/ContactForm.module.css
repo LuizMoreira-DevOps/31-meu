@@ -7,11 +7,13 @@
     margin-inline: auto;
     padding: clamp(1.25rem, 4vw, 2.5rem);
 
-    border: 1px solid #e6dcef;
-    border-radius: 2rem;
-    background-color: #ffffff;
-    color: #252044;
-    box-shadow: 0 10px 32px rgb(37 32 68 / 6%);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-card);
+
+    background: var(--color-background);
+    color: var(--color-ink);
+
+    box-shadow: var(--shadow-soft);
 }
 
 .header {
@@ -20,10 +22,11 @@
 
 .header h2 {
     margin: 0 0 0.75rem;
+
     font-family: var(--font-display), var(--font-sans), sans-serif;
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
-    font-weight: 500;
-    line-height: 1.15;
+    font-size: var(--font-size-card-title);
+    line-height: var(--line-height-heading);
+
     text-wrap: balance;
 }
 
@@ -39,13 +42,15 @@
 .field {
     display: grid;
     gap: 0.5rem;
+
     min-width: 0;
+
     text-align: left;
 }
 
 .field label {
     font-size: 0.9375rem;
-    font-weight: 650;
+    font-weight: 700;
     line-height: 1.5;
 }
 
@@ -53,16 +58,18 @@
 .field select,
 .field textarea {
     display: block;
-    box-sizing: border-box;
+
     width: 100%;
     min-width: 0;
     min-height: 48px;
+
     padding: 0.875rem 1rem;
 
-    border: 1px solid #c9bbd9;
-    border-radius: 0.875rem;
-    background-color: #fffcf7;
-    color: #252044;
+    border: 1px solid rgb(37 32 68 / 20%);
+    border-radius: var(--radius-control);
+
+    background: var(--color-surface-warm);
+    color: var(--color-ink);
 
     font: inherit;
     font-size: 1rem;
@@ -76,25 +83,27 @@
 
 .field input::placeholder,
 .field textarea::placeholder {
-    color: #746a80;
-    opacity: 1;
+    color: rgb(37 32 68 / 60%);
 }
 
 .field input:focus-visible,
 .field select:focus-visible,
 .field textarea:focus-visible {
-    outline: 3px solid #6a27ab;
+    outline: 3px solid var(--color-focus);
     outline-offset: 3px;
-    border-color: #6a27ab;
+
+    border-color: var(--color-focus);
 }
 
 .field [aria-invalid="true"] {
-    border-color: #b42338;
+    border-color: var(--color-danger);
 }
 
 .error {
     margin: 0;
-    color: #b42338;
+
+    color: var(--color-danger);
+
     font-size: 0.875rem;
     line-height: 1.5;
 }
@@ -104,22 +113,27 @@
     margin: 0;
     padding: 1.25rem;
 
-    border: 1px solid #ded1ec;
-    border-radius: 1.25rem;
-    background-color: #faf6ff;
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-card);
+
+    background: var(--color-surface-lilac);
+
     text-align: left;
 }
 
 .optional legend {
     max-width: 100%;
     padding-inline: 0.5rem;
-    color: #6a27ab;
-    font-weight: 650;
+
+    color: var(--color-action-primary);
+
+    font-weight: 700;
     line-height: 1.5;
 }
 
 .optional > p {
     margin: 0 0 1.25rem;
+
     font-size: 0.9375rem;
     line-height: 1.6;
 }
@@ -132,6 +146,7 @@
 .submitArea {
     display: grid;
     gap: 0.875rem;
+
     text-align: center;
 }
 
@@ -145,29 +160,36 @@
     padding: 0.875rem 1.25rem;
 
     border: 0;
-    border-radius: 999px;
-    background-color: #d90963;
-    color: #ffffff;
+    border-radius: var(--radius-pill);
+
+    background: var(--color-action-primary);
+    color: var(--color-on-action);
+
+    box-shadow: var(--shadow-soft);
 
     font: inherit;
     font-size: 1rem;
-    font-weight: 650;
+    font-weight: 700;
     line-height: 1.4;
+
     cursor: pointer;
 }
 
 .submitButton:hover {
-    background-color: #b80753;
+    background: var(--color-action-primary-hover);
+    box-shadow: var(--shadow-floating);
 }
 
 .submitButton:focus-visible {
-    outline: 3px solid #6a27ab;
+    outline: 3px solid var(--color-focus);
     outline-offset: 4px;
 }
 
 .note {
     margin: 0;
-    color: #62566f;
+
+    color: rgb(37 32 68 / 70%);
+
     font-size: 0.875rem;
     line-height: 1.6;
 }

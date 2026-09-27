@@ -1,19 +1,21 @@
 .faq {
-    --faq-ink: #252044;
-    --faq-purple: #6a27ab;
-    --faq-pink: #d90963;
-    --faq-cream: #fff8ed;
+    padding: clamp(3rem, 7vw, 6rem) var(--page-gutter);
 
-    padding: 1rem var(--page-gutter);
-    color: var(--faq-ink);
+    color: var(--color-ink);
+
     background:
-        radial-gradient(ellipse at top left, #eee1ff 0, transparent 38rem),
-        var(--faq-cream);
+        radial-gradient(
+            circle at 6% 8%,
+            var(--color-surface-lilac),
+            transparent 25rem
+        ),
+        var(--color-surface-warm);
 }
 
 .container {
     display: grid;
-    gap: 2.5rem;
+    gap: clamp(2.5rem, 6vw, 4rem);
+
     max-width: var(--container-width);
     margin-inline: auto;
 }
@@ -25,26 +27,31 @@
 
 .eyebrow {
     margin: 0 0 0.75rem;
-    color: var(--faq-purple);
+
+    color: var(--color-highlight);
+
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 0.15em;
     text-transform: uppercase;
 }
 
 .title {
     margin: 0 0 1rem;
+
     font-family: var(--font-display), var(--font-sans), sans-serif;
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: var(--font-size-display);
     font-weight: 600;
-    line-height: 1.08;
-    letter-spacing: -0.025em;
+    line-height: var(--line-height-heading);
+    letter-spacing: -0.035em;
+
     text-wrap: balance;
 }
 
 .description {
     max-width: 34rem;
     margin: 0;
+
     font-size: 1.0625rem;
     line-height: 1.7;
 }
@@ -56,14 +63,17 @@
 }
 
 .item {
-    border: 1px solid #e6dcef;
-    border-radius: 1.25rem;
-    background-color: #ffffff;
-    box-shadow: 0 4px 16px rgb(37 32 68 / 4%);
+    overflow: hidden;
+
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-card);
+
+    background: var(--color-background);
+    box-shadow: var(--shadow-soft);
 }
 
 .item[open] {
-    border-color: #bda3d7;
+    border-color: rgb(37 32 68 / 20%);
 }
 
 .question {
@@ -74,11 +84,11 @@
 
     min-height: 72px;
     padding: 1.25rem;
-    border-radius: 1.25rem;
 
     font-size: 1rem;
-    font-weight: 650;
+    font-weight: 700;
     line-height: 1.5;
+
     list-style: none;
     cursor: pointer;
 }
@@ -88,33 +98,41 @@
 }
 
 .question:hover {
-    background-color: #faf5ff;
+    background: rgb(236 221 255 / 35%);
 }
 
 .question:focus-visible,
 .actions a:focus-visible {
-    outline: 3px solid var(--faq-purple);
+    outline: 3px solid var(--color-focus);
     outline-offset: 4px;
 }
 
 .indicator {
     position: relative;
-    flex: 0 0 32px;
-    width: 32px;
-    height: 32px;
+
+    flex: 0 0 34px;
+
+    width: 34px;
+    height: 34px;
+
     border-radius: 50%;
-    background-color: #eee1ff;
-    color: var(--faq-purple);
+
+    background: var(--color-surface-lilac);
+    color: var(--color-action-primary);
 }
 
 .indicator::before,
 .indicator::after {
     content: "";
+
     position: absolute;
     top: 50%;
     left: 50%;
+
     border-radius: 2px;
-    background-color: currentColor;
+
+    background: currentColor;
+
     transform: translate(-50%, -50%);
 }
 
@@ -133,7 +151,8 @@
 }
 
 .answer {
-    padding: 0 1.25rem 1.25rem;
+    padding: 0 1.25rem 1.5rem;
+
     line-height: 1.75;
     overflow-wrap: anywhere;
 }
@@ -146,23 +165,27 @@
 .support {
     display: grid;
     gap: 1.5rem;
+
     padding: clamp(1.5rem, 3vw, 2.5rem);
-    border: 1px solid #e6dcef;
-    border-radius: 2rem;
-    background-color: #f0e7fa;
+
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-card);
+
+    background: var(--color-surface-lilac);
 }
 
 .support h2 {
     margin: 0 0 0.75rem;
+
     font-family: var(--font-display), var(--font-sans), sans-serif;
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 500;
-    line-height: 1.2;
+    font-size: var(--font-size-card-title);
+    line-height: var(--line-height-heading);
 }
 
 .support p {
     max-width: 38rem;
     margin: 0;
+
     line-height: 1.65;
 }
 
@@ -178,32 +201,39 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
     min-height: 48px;
     padding: 0.875rem 1.25rem;
-    border-radius: 999px;
+
+    border-radius: var(--radius-pill);
+
     font-size: 0.9375rem;
-    font-weight: 650;
+    font-weight: 700;
     line-height: 1.4;
     text-align: center;
 }
 
 .packagesLink {
-    border: 1px solid #bda3d7;
-    background-color: #ffffff;
-    color: var(--faq-ink);
+    border: 1px solid var(--color-border-subtle);
+
+    background: var(--color-background);
+    color: var(--color-ink);
 }
 
 .packagesLink:hover {
-    background-color: var(--faq-cream);
+    background: var(--color-surface-warm);
 }
 
 .contactButton {
-    background-color: var(--faq-pink);
-    color: #ffffff;
+    background: var(--color-action-primary);
+    color: var(--color-on-action);
+
+    box-shadow: var(--shadow-soft);
 }
 
 .contactButton:hover {
-    background-color: #b80753;
+    background: var(--color-action-primary-hover);
+    box-shadow: var(--shadow-floating);
 }
 
 @media (min-width: 900px) {

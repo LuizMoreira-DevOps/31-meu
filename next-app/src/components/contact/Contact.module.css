@@ -1,9 +1,15 @@
 .contact {
-    padding: 1rem var(--page-gutter);
-    color: #252044;
+    padding: clamp(3rem, 7vw, 6rem) var(--page-gutter);
+
+    color: var(--color-ink);
+
     background:
-        radial-gradient(ellipse at top center, #eee1ff 0, transparent 38rem),
-        #fff8ed;
+        radial-gradient(
+            circle at 50% 0%,
+            var(--color-surface-lilac),
+            transparent 28rem
+        ),
+        var(--color-surface-warm);
 }
 
 .container {
@@ -14,35 +20,41 @@
 .intro {
     max-width: 640px;
     margin-inline: auto;
+
     text-align: center;
 }
 
 .title {
     margin: 0 0 1rem;
+
     font-family: var(--font-display), var(--font-sans), sans-serif;
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: var(--font-size-display);
     font-weight: 600;
-    line-height: 1.08;
-    letter-spacing: -0.025em;
+    line-height: var(--line-height-heading);
+    letter-spacing: -0.035em;
+
     text-wrap: balance;
 }
 
 .description {
     margin: 0;
+
     font-size: 1.0625rem;
     line-height: 1.7;
 }
 
 .socialNav {
     max-width: 640px;
-    margin: 2rem auto 3rem;
+    margin: 2.5rem auto 3rem;
 }
 
 .socialLinks {
     display: grid;
     gap: 1rem;
+
     margin: 0;
     padding: 0;
+
     list-style: none;
 }
 
@@ -61,24 +73,24 @@
     min-height: 112px;
     padding: 1.5rem;
 
-    border: 1px solid #d7c5e8;
-    border-radius: 1.5rem;
-    background-color: #ffffff;
-    color: #252044;
-    text-align: center;
-    text-decoration: none;
-    overflow-wrap: anywhere;
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-card);
 
-    box-shadow: 0 6px 20px rgb(37 32 68 / 5%);
+    background: var(--color-background);
+    color: var(--color-ink);
+
+    box-shadow: var(--shadow-soft);
+
+    text-align: center;
+    overflow-wrap: anywhere;
 }
 
 .socialLink:hover {
-    border-color: #b58bd5;
-    background-color: #f5edff;
+    background: var(--color-surface-lilac);
 }
 
 .socialLink:focus-visible {
-    outline: 3px solid #6a27ab;
+    outline: 3px solid var(--color-focus);
     outline-offset: 4px;
 }
 
@@ -90,7 +102,7 @@
 }
 
 .socialName > span {
-    color: #d90963;
+    color: var(--color-highlight);
 }
 
 .socialHandle {

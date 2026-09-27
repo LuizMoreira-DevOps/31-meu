@@ -1,10 +1,18 @@
 .page {
-    padding: var(--space-12) var(--page-gutter);
-    background: linear-gradient(
-        180deg,
-        var(--color-surface-soft) 0,
-        var(--color-surface-warm) 24rem
-    );
+    padding: clamp(3rem, 7vw, 6rem) var(--page-gutter);
+
+    background:
+        radial-gradient(
+            circle at 90% 8%,
+            var(--color-surface-lilac),
+            transparent 25rem
+        ),
+        linear-gradient(
+            180deg,
+            var(--color-surface-soft),
+            var(--color-surface-warm) 28rem
+        );
+
     color: var(--color-ink);
 }
 
@@ -15,13 +23,13 @@
 }
 
 .header {
-    max-width: 48rem;
+    max-width: 52rem;
     margin-bottom: var(--space-12);
 }
 
 .eyebrow {
     margin: 0 0 0.75rem;
-    color: var(--color-brand-turquoise);
+    color: var(--color-highlight);
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.12em;
@@ -68,10 +76,13 @@
 }
 
 .section {
-    padding: var(--space-6);
+    padding: clamp(1.5rem, 3vw, 2rem);
+
     border: 1px solid var(--color-border-subtle);
-    border-radius: 1.5rem;
+    border-radius: var(--radius-card);
+
     background: var(--color-background);
+    box-shadow: var(--shadow-soft);
 }
 
 .section h2 {
@@ -90,11 +101,11 @@
 }
 
 .included {
-    background: #dcf2c9;
+    background: var(--color-surface-green);
 }
 
 .addons {
-    background: #ecddff;
+    background: var(--color-surface-lilac);
 }
 
 .footerGrid {
@@ -107,12 +118,18 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
     min-height: 48px;
     margin-top: var(--space-6);
     padding: 0.9rem 1.4rem;
-    border-radius: 999px;
+
+    border-radius: var(--radius-pill);
+
     background: var(--color-action-primary);
     color: var(--color-on-action);
+
+    box-shadow: var(--shadow-soft);
+
     font-weight: 700;
 }
 

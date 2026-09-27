@@ -376,7 +376,7 @@ export default function PartyBuilder({
     }
 
     return (
-        <form onSubmit={handleSubmit} noValidate>
+        <form className={styles.form} onSubmit={handleSubmit} noValidate>
             <label htmlFor="party-combo">{content.label}</label>
 
             <select
@@ -612,7 +612,7 @@ export default function PartyBuilder({
             </div>
 
             {selectedCombo && (
-                <fieldset>
+                <fieldset className={styles.addons}>
                     <legend>{addonsContent.title}</legend>
 
                     {availableAddons.length > 0 ? (
@@ -662,7 +662,10 @@ export default function PartyBuilder({
             )}
 
             {selectedCombo && (
-                <section aria-labelledby="party-summary-title">
+                <section
+                    className={styles.summary}
+                    aria-labelledby="party-summary-title"
+                >
                     <h2 id="party-summary-title">{summaryContent.title}</h2>
 
                     {requesterName.trim() && (
@@ -776,7 +779,7 @@ export default function PartyBuilder({
                 </section>
             )}
 
-            <div>
+            <div className={styles.submitArea}>
                 <button type="submit" aria-describedby="party-whatsapp-note">
                     {whatsappContent.submitLabel}
                 </button>

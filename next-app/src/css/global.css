@@ -18,31 +18,62 @@
     --font-size-card-title: clamp(1.375rem, 1.8vw, 2rem);
 
     /*===========================================
-    COLORS
-    ===========================================*/
+COLORS
+===========================================*/
+
     --color-background: #fff;
     --color-text: #1f2937;
-    --color-surface-soft: #e0f7f7;
     --color-heading: #000;
+    --color-ink: #252044;
+
+    --color-surface-soft: #e0f7f7;
     --color-surface-warm: #fff8ed;
+    --color-surface-lilac: #ecddff;
+    --color-surface-green: #dcf2c9;
+
     --color-brand-turquoise: #007f83;
+    --color-brand-pink: #d90963;
+
+    --color-action-primary: var(--color-brand-turquoise);
+    --color-action-primary-hover: #00676a;
     --color-action-yellow: #ffe24a;
     --color-action-coral: #ff817a;
-    --color-ink: #252044;
-    --color-action-primary: #d90963;
-    --color-action-primary-hover: #b80753;
+
+    --color-highlight: var(--color-brand-turquoise);
+
     --color-on-action: #fff;
+
+    --color-danger: #b42338;
+
     --color-focus: #34256c;
     --color-focus-on-dark: #ffe5a6;
+
     --color-brand-on-dark: #ffa9d3;
+
     --color-border-subtle: rgb(37 32 68 / 8%);
 
     /*===========================================
-    SPACING
-    ===========================================*/
+SPACING
+===========================================*/
+
     --space-4: 1rem;
     --space-6: 1.5rem;
     --space-12: 3rem;
+
+    /*===========================================
+SHAPE
+===========================================*/
+
+    --radius-control: 0.75rem;
+    --radius-card: 1.5rem;
+    --radius-pill: 999px;
+
+    /*===========================================
+SHADOWS
+===========================================*/
+
+    --shadow-soft: 0 10px 30px rgb(37 32 68 / 10%);
+    --shadow-floating: 0 16px 40px rgb(37 32 68 / 16%);
 
     /*===========================================
     LAYOUT
