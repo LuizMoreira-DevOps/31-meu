@@ -10,6 +10,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { getSiteContent } from "@/lib/content";
 import { createWhatsAppUrl } from "@/lib/whatsapp";
+import RouteScrollReset from "@/components/navigation/RouteScrollReset";
 
 import "@/css/global.css";
 
@@ -64,6 +65,8 @@ export default async function RootLayout({ children }) {
             className={`${geistSans.variable} ${geistMono.variable} ${luckiestGuy.variable} ${kalam.variable} ${fredoka.variable}`}
         >
             <body id="topo">
+                <RouteScrollReset />
+
                 <a className="siteSkipLink" href="#conteudo">
                     {site.header.skipLabel}
                 </a>
@@ -73,7 +76,7 @@ export default async function RootLayout({ children }) {
                     navigation={site.navigation}
                     contactAction={{
                         label: site.header.contactLabel,
-                        href: contactUrl,
+                        href: site.header.contactHref,
                     }}
                 />
 
@@ -81,8 +84,10 @@ export default async function RootLayout({ children }) {
 
                 <Footer
                     brand={site.brand}
-                    navigation={site.navigation}
                     content={site.footer}
+                    socialLinks={site.socialLinks}
+                    location={site.location}
+                    contactUrl={contactUrl}
                 />
             </body>
         </html>

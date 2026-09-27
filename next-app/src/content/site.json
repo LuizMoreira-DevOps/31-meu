@@ -1,6 +1,7 @@
 {
     "header": {
-        "contactLabel": "Fale com a gente",
+        "contactLabel": "Vamos conversar",
+        "contactHref": "/contato",
         "skipLabel": "Pular para o conteúdo"
     },
     "socialLinks": [
@@ -34,20 +35,16 @@
         }
     },
     "footer": {
-        "text": "31 Meu · Festas, encontros e boas memórias.",
-        "navigationLabel": "Navegação do rodapé"
-    },
-    "contact": {
-        "whatsapp": "5541997249945"
-    },
-    "messages": {
-        "scheduleVisit": "Olá! Visitei o site e gostaria de agendar uma visita ao 31 Meu."
-    },
-    "navigation": {
-        "openLabel": "Abrir menu",
-        "closeLabel": "Fechar menu",
-        "label": "Navegação principal",
-        "items": [
+        "tagline": "Festas, encontros e boas memórias.",
+        "navigationLabel": "Navegação do rodapé",
+        "navigationTitle": "Navegue",
+        "contactTitle": "Fale com a gente",
+        "locationTitle": "Onde estamos",
+        "whatsappLabel": "WhatsApp",
+        "contactLabel": "Contato",
+        "locationLabel": "Ver localização",
+        "copyrightText": "31 Meu Buffet Infantil. Todos os direitos reservados.",
+        "navigation": [
             {
                 "id": "space",
                 "label": "O espaço",
@@ -72,16 +69,49 @@
                 "id": "faq",
                 "label": "Dúvidas",
                 "href": "/faq"
+            }
+        ]
+    },
+    "contact": {
+        "whatsapp": "5541997249945"
+    },
+    "messages": {
+        "scheduleVisit": "Olá! Visitei o site e gostaria de agendar uma visita ao 31 Meu."
+    },
+    "navigation": {
+        "openLabel": "Menu",
+        "closeLabel": "Fechar",
+        "label": "Navegação principal",
+        "items": [
+            {
+                "id": "space",
+                "label": "Espaço",
+                "href": "/#espaco"
+            },
+            {
+                "id": "differentials",
+                "label": "Diferenciais",
+                "href": "/#diferenciais"
+            },
+            {
+                "id": "testimonials",
+                "label": "Histórias",
+                "href": "/#depoimentos"
+            },
+            {
+                "id": "packages",
+                "label": "Combos",
+                "href": "/pacotes"
+            },
+            {
+                "id": "faq",
+                "label": "Dúvidas",
+                "href": "/faq"
             },
             {
                 "id": "location",
-                "label": "Localização",
+                "label": "Como chegar",
                 "href": "/localizacao"
-            },
-            {
-                "id": "contact",
-                "label": "Contato",
-                "href": "/contato"
             }
         ]
     },
