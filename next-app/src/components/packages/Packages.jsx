@@ -1,29 +1,29 @@
 import styles from "./Packages.module.css";
 
-export default function PackagesOverview({ content }) {
+export default function PackagesOverview({ content, combos }) {
     return (
         <section className={styles.page}>
             <div className={styles.container}>
                 <h1 className={styles.title}>{content.title}</h1>
+
                 <p className={styles.description}>{content.description}</p>
 
                 <ul className={styles.list}>
-                    {content.packages.map((item) => (
-                        <li key={item.id} className={styles.card}>
-                            <h2>{item.title}</h2>
-                            <a className={styles.link} href={item.href}>
-                                {item.label}
+                    {combos.map((combo) => (
+                        <li key={combo.id} className={styles.card}>
+                            <h2>{combo.title}</h2>
+
+                            <p>{combo.description}</p>
+
+                            <a
+                                className={styles.link}
+                                href={`/pacotes/${combo.slug}`}
+                            >
+                                Ver detalhes
                             </a>
                         </li>
                     ))}
                 </ul>
-
-                <a
-                    className={styles.link}
-                    href={content.allPackagesAction.href}
-                >
-                    {content.allPackagesAction.label}
-                </a>
             </div>
         </section>
     );

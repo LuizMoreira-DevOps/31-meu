@@ -1,0 +1,62 @@
+{
+    "title": "Crie a festa dos seus sonhos",
+    "comboSelection": {
+        "label": "Escolha seu combo (obrigatório)",
+        "placeholder": "Selecione um combo",
+        "selectedLabel": "Combo selecionado:",
+        "emptyMessage": "Nenhum combo selecionado.",
+        "requiredMessage": "Selecione um combo para continuar."
+    },
+    "addons": {
+        "title": "Adicionais e itens incluídos",
+        "includedLabel": "Incluído no combo",
+        "emptyMessage": "Este combo não possui adicionais disponíveis.",
+        "nowIncludedMessage": "Passaram a fazer parte do combo:",
+        "nowOptionalMessage": "Deixaram de estar incluídos. Marque-os se desejar adicionar:",
+        "removedMessage": "Saíram da seleção porque não estão disponíveis no combo atual:"
+    },
+    "summary": {
+        "title": "Resumo das escolhas",
+        "emptyMessage": "Nenhum adicional selecionado.",
+        "conditionsTitle": "Condições do combo",
+        "commercialNotice": "Esta é uma solicitação de análise comercial. Valores e disponibilidade serão informados pela equipe. O preenchimento não confirma contratação ou reserva.",
+        "reviewTitle": "Pontos para avaliar com a equipe"
+    },
+    "partyDetails": {
+        "requesterNameLabel": "Seu nome (obrigatório)",
+        "requesterNameSummaryLabel": "Solicitante:",
+        "dateLabel": "Data desejada",
+        "dateUnknownLabel": "Ainda não definida",
+        "dateSummaryLabel": "Data desejada:",
+        "adultsLabel": "Quantidade de adultos",
+        "childrenLabel": "Quantidade de crianças",
+        "quantityUnknownLabel": "Ainda não sei",
+        "quantityHelp": "Informe uma quantidade inteira ou deixe em branco se ainda não souber.",
+        "adultsSummaryLabel": "Adultos:",
+        "childrenSummaryLabel": "Crianças:",
+        "birthdayNameLabel": "Nome do aniversariante (opcional)",
+        "birthdayAgeLabel": "Idade a completar, em anos (opcional)",
+        "birthdayNameSummaryLabel": "Aniversariante:",
+        "birthdayAgeSummaryLabel": "Idade a completar (anos):",
+        "observationsLabel": "Observações (opcional)",
+        "observationsSummaryLabel": "Observações:",
+        "requesterNameRequiredMessage": "Informe seu nome.",
+        "quantityInvalidMessage": "Informe um número inteiro igual ou maior que zero, ou deixe em branco.",
+        "quantityInvalidSummary": "Revise a quantidade informada.",
+        "birthdayAgeInvalidMessage": "Informe a idade em anos inteiros, igual ou maior que zero, ou deixe em branco.",
+        "birthdayAgeInvalidSummary": "Revise a idade informada.",
+        "dateInvalidMessage": "Complete uma data válida ou escolha Ainda não definida.",
+        "dateInvalidSummary": "Revise a data informada.",
+        "datePastMessage": "A data informada já passou. Escolha hoje ou uma data futura, ou selecione Ainda não definida."
+    },
+    "whatsapp": {
+        "submitLabel": "Consultar minha festa no WhatsApp",
+        "submitNote": "Você poderá revisar a mensagem no WhatsApp antes de enviá-la.",
+        "messageIntro": "Olá! Montei uma proposta de festa pelo site do 31 Meu e gostaria de consultar valores e disponibilidade.",
+        "comboLabel": "Combo:",
+        "includedTitle": "Itens incluídos no combo:",
+        "selectedAddonsTitle": "Opcionais escolhidos:",
+        "noAddonsLabel": "Nenhum opcional selecionado.",
+        "reviewTitle": "Pontos para avaliar com a equipe:"
+    }
+}
