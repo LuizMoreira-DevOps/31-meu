@@ -62,6 +62,7 @@ export default async function RootLayout({ children }) {
     return (
         <html
             lang="pt-BR"
+            data-scroll-behavior="smooth"
             className={`${geistSans.variable} ${geistMono.variable} ${luckiestGuy.variable} ${kalam.variable} ${fredoka.variable}`}
         >
             <body id="topo">

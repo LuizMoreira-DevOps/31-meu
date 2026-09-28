@@ -1,5 +1,7 @@
 .page {
-    padding: clamp(3rem, 7vw, 6rem) var(--page-gutter);
+    padding: var(--page-inner-padding-top) var(--page-gutter)
+        var(--page-inner-padding-bottom);
+
     background:
         radial-gradient(
             circle at 8% 8%,
@@ -7,6 +9,7 @@
             transparent 24rem
         ),
         var(--color-surface-warm);
+
     color: var(--color-ink);
 }
 

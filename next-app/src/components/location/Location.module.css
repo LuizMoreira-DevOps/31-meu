@@ -1,5 +1,6 @@
 .location {
-    padding: clamp(3rem, 7vw, 6rem) var(--page-gutter);
+    padding: var(--page-inner-padding-top) var(--page-gutter)
+        var(--page-inner-padding-bottom);
 
     color: var(--color-ink);
 

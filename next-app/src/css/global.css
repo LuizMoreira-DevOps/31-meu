@@ -72,10 +72,12 @@ SHADOWS
     --shadow-floating: 0 16px 40px rgb(37 32 68 / 16%);
 
     /*===========================================
-    LAYOUT
-    ===========================================*/
+LAYOUT
+===========================================*/
     --container-width: 1200px;
     --page-gutter: clamp(1.25rem, 4vw, 4rem);
+    --page-inner-padding-top: clamp(1.5rem, 3vw, 2.25rem);
+    --page-inner-padding-bottom: clamp(3rem, 7vw, 6rem);
 
     /*===========================================
 HERO
